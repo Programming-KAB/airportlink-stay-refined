@@ -38,7 +38,7 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#F2FCE2]">
       <Navbar />
       <HeroSlider />
       
@@ -46,7 +46,7 @@ const Index = () => {
         <RoomSection />
       </div>
       
-      <div className="section-fade-in" id="about">
+      <div className="section-fade-in bg-[#F2FCE2]" id="about">
         <AboutSection />
       </div>
       
@@ -54,7 +54,7 @@ const Index = () => {
         <AmenitiesSection />
       </div>
       
-      <div className="section-fade-in">
+      <div className="section-fade-in bg-[#F2FCE2]">
         <TestimonialsSection />
       </div>
       
@@ -62,7 +62,7 @@ const Index = () => {
         <ContactSection />
       </div>
       
-      <div className="section-fade-in" id="booking">
+      <div className="section-fade-in bg-[#F2FCE2]" id="booking">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-2xl mx-auto">
             <BookingForm />
