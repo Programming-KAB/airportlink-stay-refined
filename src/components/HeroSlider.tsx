@@ -47,10 +47,14 @@ const HeroSlider: React.FC = () => {
         <CarouselContent className="h-full">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="h-full w-full p-0">
-              {/* Background image with overlay - full width */}
+              {/* Background image with overlay - full width and height */}
               <div 
-                className="absolute inset-0 bg-cover bg-center w-full" 
-                style={{ backgroundImage: `url('${slide.image}')` }}
+                className="absolute inset-0 bg-cover bg-center w-full h-full" 
+                style={{ 
+                  backgroundImage: `url('${slide.image}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
               >
                 <div className="absolute inset-0 bg-[#800000] opacity-50"></div>
               </div>
