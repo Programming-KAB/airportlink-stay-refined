@@ -17,10 +17,12 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-secondary transition-colors">Home</a></li>
-              <li><a href="#rooms" className="text-gray-300 hover:text-secondary transition-colors">Rooms</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-secondary transition-colors">About Us</a></li>
-              <li><a href="#amenities" className="text-gray-300 hover:text-secondary transition-colors">Amenities</a></li>
+              <li><Link to="/" className="text-gray-300 hover:text-secondary transition-colors">Home</Link></li>
+              <li><Link to="/rooms" className="text-gray-300 hover:text-secondary transition-colors">Rooms</Link></li>
+              <li><Link to="/about" className="text-gray-300 hover:text-secondary transition-colors">About Us</Link></li>
+              <li><Link to="/amenities" className="text-gray-300 hover:text-secondary transition-colors">Amenities</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-secondary transition-colors">Contact</Link></li>
+              <li><a href="https://away2uganda.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-secondary transition-colors">Safaris</a></li>
               <li><a href="#booking" className="text-gray-300 hover:text-secondary transition-colors">Book Now</a></li>
             </ul>
           </div>
