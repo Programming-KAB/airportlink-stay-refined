@@ -12,24 +12,31 @@ import {
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    title: "Luxurious Room Accommodations",
-    description: "Experience our spacious, elegant rooms with premium bedding, modern amenities, and breathtaking views. Perfect for both business and leisure travelers seeking comfort and style.",
+    image: "https://www.airportlinkguesthouse.com/wp-content/uploads/2025/05/Trip_Bed-scaled.jpg",
+    title: "Comfortable & Spacious Accommodations",
+    description: "Experience our well-appointed triple rooms with premium bedding, modern amenities, and a tranquil atmosphere. Perfect for families or groups traveling together.",
     buttonText: "Explore Our Rooms"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    title: "Exquisite Dining Experience",
-    description: "Savor our delectable menu featuring local and international cuisine prepared by expert chefs using fresh ingredients. Enjoy memorable meals in our elegant restaurant setting.",
-    buttonText: "View Our Menu"
+    image: "https://www.airportlinkguesthouse.com/wp-content/uploads/2024/10/Outside_sits-scaled.jpg",
+    title: "Relaxing Outdoor Space",
+    description: "Unwind in our peaceful outdoor seating area surrounded by greenery. The perfect spot to enjoy your morning coffee or evening refreshments after a day of travel.",
+    buttonText: "View Our Amenities"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    title: "Perfect Location",
-    description: "Just minutes away from the airport with easy access to major attractions. Combine your stay with an unforgettable safari experience through our partners at Away2Uganda.",
-    buttonText: "Discover Safaris"
+    image: "https://www.airportlinkguesthouse.com/wp-content/uploads/2024/10/Single-_bed_out-scaled.jpg",
+    title: "Cozy Single Accommodations",
+    description: "Our single rooms offer comfort and convenience for the solo traveler. Enjoy quality bedding and a peaceful atmosphere with easy airport access.",
+    buttonText: "Book Now"
+  },
+  {
+    id: 4,
+    image: "https://www.airportlinkguesthouse.com/wp-content/uploads/2024/10/Trip_Bed-scaled.jpg",
+    title: "Premium Triple Rooms",
+    description: "Spacious triple rooms ideal for groups or families, featuring comfortable beds and all the amenities you need for a relaxing stay near the airport.",
+    buttonText: "See Availability"
   }
 ];
 
@@ -58,7 +65,7 @@ const HeroSlider: React.FC = () => {
                     {slide.description}
                   </p>
                   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href={slide.id === 3 ? "https://away2uganda.com" : "#booking"}>
+                    <a href={slide.id === 2 ? "#amenities" : slide.id === 3 ? "#booking" : "#rooms"}>
                       <Button className="bg-[#4CAF50] hover:bg-[#388E3C] text-white transition-colors text-lg px-8 py-6">
                         {slide.buttonText}
                       </Button>
