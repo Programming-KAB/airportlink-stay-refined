@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import HeroSlider from '@/components/HeroSlider';
 import RoomSection from '@/components/RoomSection';
 import AboutSection from '@/components/AboutSection';
 import AmenitiesSection from '@/components/AmenitiesSection';
@@ -40,17 +40,17 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <Hero />
+      <HeroSlider />
       
-      <div className="section-fade-in">
+      <div className="section-fade-in" id="rooms">
         <RoomSection />
       </div>
       
-      <div className="section-fade-in">
+      <div className="section-fade-in" id="about">
         <AboutSection />
       </div>
       
-      <div className="section-fade-in">
+      <div className="section-fade-in" id="amenities">
         <AmenitiesSection />
       </div>
       
@@ -58,7 +58,7 @@ const Index = () => {
         <TestimonialsSection />
       </div>
       
-      <div className="section-fade-in">
+      <div className="section-fade-in" id="contact">
         <ContactSection />
       </div>
       

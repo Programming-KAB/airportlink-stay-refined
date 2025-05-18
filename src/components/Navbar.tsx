@@ -11,30 +11,32 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md">
+    <nav className="sticky top-0 z-50 bg-primary shadow-md">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <h1 className="text-2xl font-playfair font-bold text-primary">
-              Airport Link <span className="text-secondary">Guesthouse</span>
-            </h1>
+            <img 
+              src="https://www.airportlinkguesthouse.com/wp-content/uploads/2019/06/logo-white.png" 
+              alt="Airport Link Guesthouse" 
+              className="h-12 mr-3"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="font-medium text-gray-700 hover:text-secondary transition-colors">
+            <Link to="/" className="font-medium text-white hover:text-secondary transition-colors">
               Home
             </Link>
-            <a href="#rooms" className="font-medium text-gray-700 hover:text-secondary transition-colors">
+            <a href="#rooms" className="font-medium text-white hover:text-secondary transition-colors">
               Rooms
             </a>
-            <a href="#about" className="font-medium text-gray-700 hover:text-secondary transition-colors">
+            <a href="#about" className="font-medium text-white hover:text-secondary transition-colors">
               About Us
             </a>
-            <a href="#amenities" className="font-medium text-gray-700 hover:text-secondary transition-colors">
+            <a href="#amenities" className="font-medium text-white hover:text-secondary transition-colors">
               Amenities
             </a>
-            <a href="#contact" className="font-medium text-gray-700 hover:text-secondary transition-colors">
+            <a href="#contact" className="font-medium text-white hover:text-secondary transition-colors">
               Contact
             </a>
             <a href="#booking">
@@ -48,7 +50,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-secondary focus:outline-none"
+              className="text-white hover:text-secondary focus:outline-none"
             >
               <svg
                 className="w-6 h-6"
@@ -83,35 +85,35 @@ const Navbar: React.FC = () => {
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <a 
                 href="#rooms" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Rooms
               </a>
               <a 
                 href="#about" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </a>
               <a 
                 href="#amenities" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Amenities
               </a>
               <a 
                 href="#contact" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-secondary hover:bg-gray-50 transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
