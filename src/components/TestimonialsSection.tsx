@@ -40,7 +40,7 @@ const TestimonialsSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-primary text-white">
+    <section className="py-16 bg-[#800000] text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-3">What Our Guests Say</h2>
@@ -67,8 +67,8 @@ const TestimonialsSection: React.FC = () => {
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index}>
-                  <Card className="bg-primary-light border-none hover-scale">
+                <CarouselItem key={index} className="sm:basis-full md:basis-1/2 lg:basis-1/3">
+                  <Card className="bg-[#600000] border-none hover-scale">
                     <CardContent className="p-6">
                       <div className="flex items-center mb-4">
                         <img 
@@ -88,7 +88,7 @@ const TestimonialsSection: React.FC = () => {
                           </span>
                         ))}
                       </div>
-                      <p className="italic text-gray-200 text-lg">"{testimonial.quote}"</p>
+                      <p className="italic text-gray-200 text-lg">{testimonial.quote}</p>
                     </CardContent>
                   </Card>
                 </CarouselItem>
