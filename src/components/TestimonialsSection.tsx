@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -27,6 +28,17 @@ const testimonials = [
 ];
 
 const TestimonialsSection: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  // Auto-rotate testimonials every 10 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % testimonials.length);
+    }, 10000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-16 bg-primary text-white">
       <div className="container mx-auto px-4">
@@ -37,32 +49,69 @@ const TestimonialsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-primary-light border-none hover-scale">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name} 
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h4 className="font-medium text-white">{testimonial.name}</h4>
-                    <p className="text-gray-300 text-sm">{testimonial.location}</p>
-                  </div>
-                </div>
-                <div className="mb-3">
-                  {Array(5).fill(0).map((_, i) => (
-                    <span key={i} className="text-lg">
-                      {i < testimonial.rating ? "⭐" : "☆"}
-                    </span>
-                  ))}
-                </div>
-                <p className="italic text-gray-200">"{testimonial.quote}"</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <Carousel 
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            setApi={(api) => {
+              if (api) {
+                api.on("select", () => {
+                  setActiveIndex(api.selectedScrollSnap());
+                });
+                api.scrollTo(activeIndex);
+              }
+            }}
+          >
+            <CarouselContent>
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index}>
+                  <Card className="bg-primary-light border-none hover-scale">
+                    <CardContent className="p-6">
+                      <div className="flex items-center mb-4">
+                        <img 
+                          src={testimonial.image} 
+                          alt={testimonial.name} 
+                          className="w-12 h-12 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                          <h4 className="font-medium text-white">{testimonial.name}</h4>
+                          <p className="text-gray-300 text-sm">{testimonial.location}</p>
+                        </div>
+                      </div>
+                      <div className="mb-3">
+                        {Array(5).fill(0).map((_, i) => (
+                          <span key={i} className="text-lg">
+                            {i < testimonial.rating ? "⭐" : "☆"}
+                          </span>
+                        ))}
+                      </div>
+                      <p className="italic text-gray-200 text-lg">"{testimonial.quote}"</p>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-6">
+              <CarouselPrevious className="relative static mr-2 translate-y-0" />
+              <CarouselNext className="relative static translate-y-0" />
+            </div>
+          </Carousel>
+          
+          <div className="flex justify-center mt-4">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveIndex(index)}
+                className={`w-2 h-2 mx-1 rounded-full ${
+                  index === activeIndex ? 'bg-white' : 'bg-gray-500'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

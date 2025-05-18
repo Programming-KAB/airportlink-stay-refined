@@ -27,19 +27,19 @@ const Navbar: React.FC = () => {
             <Link to="/" className="font-medium text-white hover:text-secondary transition-colors">
               Home
             </Link>
-            <a href="#rooms" className="font-medium text-white hover:text-secondary transition-colors">
+            <Link to="/rooms" className="font-medium text-white hover:text-secondary transition-colors">
               Rooms
-            </a>
-            <a href="#about" className="font-medium text-white hover:text-secondary transition-colors">
+            </Link>
+            <Link to="/about" className="font-medium text-white hover:text-secondary transition-colors">
               About Us
-            </a>
-            <a href="#amenities" className="font-medium text-white hover:text-secondary transition-colors">
+            </Link>
+            <Link to="/amenities" className="font-medium text-white hover:text-secondary transition-colors">
               Amenities
-            </a>
-            <a href="#contact" className="font-medium text-white hover:text-secondary transition-colors">
+            </Link>
+            <Link to="/contact" className="font-medium text-white hover:text-secondary transition-colors">
               Contact
-            </a>
-            <a href="#booking">
+            </Link>
+            <a href="/#booking">
               <Button className="bg-secondary hover:bg-secondary-dark text-primary-dark transition-colors">
                 Book Now
               </Button>
@@ -90,36 +90,36 @@ const Navbar: React.FC = () => {
               >
                 Home
               </Link>
-              <a 
-                href="#rooms" 
+              <Link 
+                to="/rooms" 
                 className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Rooms
-              </a>
-              <a 
-                href="#about" 
+              </Link>
+              <Link 
+                to="/about" 
                 className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
-              </a>
-              <a 
-                href="#amenities" 
+              </Link>
+              <Link 
+                to="/amenities" 
                 className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Amenities
-              </a>
-              <a 
-                href="#contact" 
+              </Link>
+              <Link 
+                to="/contact" 
                 className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </a>
+              </Link>
               <a 
-                href="#booking"
+                href="/#booking"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Button className="w-full bg-secondary hover:bg-secondary-dark text-primary-dark transition-colors">

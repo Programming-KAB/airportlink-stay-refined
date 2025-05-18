@@ -16,6 +16,7 @@ const SimpleBookingForm: React.FC = () => {
   const [adults, setAdults] = useState("1");
   const [children, setChildren] = useState("0");
   const [roomType, setRoomType] = useState("");
+  const [showFullForm, setShowFullForm] = useState(false);
   
   const { toast } = useToast();
 
@@ -31,25 +32,16 @@ const SimpleBookingForm: React.FC = () => {
       return;
     }
 
-    if (!roomType) {
-      toast({
-        title: "Error",
-        description: "Please select a room type.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Navigate to full booking form
-    // This would typically redirect to a booking page or open a modal
-    // For now, we'll just show a toast
-    toast({
-      title: "Booking Started",
-      description: "You've been redirected to our full booking form.",
-    });
+    // Show the full booking form instead of redirecting
+    setShowFullForm(true);
     
-    // In a real implementation, we would redirect to a full booking page
-    window.location.href = "#booking";
+    // Scroll to the full booking form
+    setTimeout(() => {
+      const element = document.getElementById('full-booking-form');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (
@@ -158,18 +150,41 @@ const SimpleBookingForm: React.FC = () => {
           </div>
         </form>
       </div>
+      
+      {showFullForm && (
+        <div id="full-booking-form" className="container mx-auto px-4 py-16 animate-fade-in">
+          <FullBookingForm 
+            checkInInitial={checkIn} 
+            checkOutInitial={checkOut} 
+            adultsInitial={adults}
+            childrenInitial={children}
+          />
+        </div>
+      )}
     </div>
   );
 };
 
-const FullBookingForm: React.FC = () => {
+interface FullBookingFormProps {
+  checkInInitial?: Date;
+  checkOutInitial?: Date;
+  adultsInitial?: string;
+  childrenInitial?: string;
+}
+
+const FullBookingForm: React.FC<FullBookingFormProps> = ({ 
+  checkInInitial, 
+  checkOutInitial, 
+  adultsInitial = "1",
+  childrenInitial = "0"
+}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [roomType, setRoomType] = useState('');
-  const [guests, setGuests] = useState('');
-  const [checkIn, setCheckIn] = useState<Date | undefined>(undefined);
-  const [checkOut, setCheckOut] = useState<Date | undefined>(undefined);
+  const [guests, setGuests] = useState(adultsInitial);
+  const [checkIn, setCheckIn] = useState<Date | undefined>(checkInInitial);
+  const [checkOut, setCheckOut] = useState<Date | undefined>(checkOutInitial);
   const [specialRequests, setSpecialRequests] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -182,6 +197,15 @@ const FullBookingForm: React.FC = () => {
       toast({
         title: "Error",
         description: "Please select both check-in and check-out dates.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!roomType) {
+      toast({
+        title: "Error",
+        description: "Please select a room type.",
         variant: "destructive",
       });
       return;
@@ -239,183 +263,178 @@ const FullBookingForm: React.FC = () => {
   };
 
   return (
-    <div id="booking" className="container mx-auto px-4 py-16">
-      <div className="max-w-2xl mx-auto">
-        <Card className="shadow-lg">
-          <div className="bg-[#800000] text-white rounded-t-lg p-6">
-            <h2 className="text-2xl font-playfair">Book Your Stay</h2>
-            <p className="text-gray-200">
-              Fill out the form below to request a reservation
-            </p>
-          </div>
-          <div className="p-6">
-            <form onSubmit={handleSubmit} className="space-y-4">
+    <div id="booking" className="max-w-2xl mx-auto">
+      <Card className="shadow-lg">
+        <div className="bg-[#800000] text-white rounded-t-lg p-6">
+          <h2 className="text-2xl font-playfair">Book Your Stay</h2>
+          <p className="text-gray-200">
+            Fill out the form below to request a reservation
+          </p>
+        </div>
+        <div className="p-6">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-2">
+              <label htmlFor="name" className="text-sm font-medium">Full Name</label>
+              <input 
+                id="name" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="John Doe" 
+                required 
+                className="w-full p-2 border rounded"
+              />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium">Full Name</label>
+                <label htmlFor="email" className="text-sm font-medium">Email Address</label>
                 <input 
-                  id="name" 
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="John Doe" 
+                  id="email" 
+                  type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="john@example.com" 
                   required 
                   className="w-full p-2 border rounded"
                 />
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">Email Address</label>
-                  <input 
-                    id="email" 
-                    type="email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="john@example.com" 
-                    required 
-                    className="w-full p-2 border rounded"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="phone" className="text-sm font-medium">Phone Number</label>
-                  <input 
-                    id="phone" 
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    placeholder="+1 (123) 456-7890" 
-                    required 
-                    className="w-full p-2 border rounded"
-                  />
-                </div>
+              <div className="space-y-2">
+                <label htmlFor="phone" className="text-sm font-medium">Phone Number</label>
+                <input 
+                  id="phone" 
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="+1 (123) 456-7890" 
+                  required 
+                  className="w-full p-2 border rounded"
+                />
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label htmlFor="room-type" className="text-sm font-medium">Room Type</label>
-                  <Select value={roomType} onValueChange={setRoomType} required>
-                    <SelectTrigger id="room-type">
-                      <SelectValue placeholder="Select Room Type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="deluxe-twin">Deluxe Twin Bed Room</SelectItem>
-                      <SelectItem value="deluxe-single">Deluxe Single Bed Room</SelectItem>
-                      <SelectItem value="budget-single">Budget Single Bed Room</SelectItem>
-                      <SelectItem value="triple">Triple Bed Room</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="guests" className="text-sm font-medium">Number of Guests</label>
-                  <Select value={guests} onValueChange={setGuests} required>
-                    <SelectTrigger id="guests">
-                      <SelectValue placeholder="Select Number" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1">1 Guest</SelectItem>
-                      <SelectItem value="2">2 Guests</SelectItem>
-                      <SelectItem value="3">3 Guests</SelectItem>
-                      <SelectItem value="4">4 Guests</SelectItem>
-                      <SelectItem value="5+">5+ Guests</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label htmlFor="room-type" className="text-sm font-medium">Room Type</label>
+                <Select value={roomType} onValueChange={setRoomType} required>
+                  <SelectTrigger id="room-type">
+                    <SelectValue placeholder="Select Room Type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="deluxe-twin">Deluxe Twin Bed Room</SelectItem>
+                    <SelectItem value="deluxe-single">Deluxe Single Bed Room</SelectItem>
+                    <SelectItem value="budget-single">Budget Single Bed Room</SelectItem>
+                    <SelectItem value="triple">Triple Bed Room</SelectItem>
+                  </SelectContent>
+                </Select>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Check-in Date</label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "w-full justify-start text-left font-normal",
-                          !checkIn && "text-muted-foreground"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {checkIn ? format(checkIn, "PPP") : <span>Pick a date</span>}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0">
-                      <Calendar
-                        mode="single"
-                        selected={checkIn}
-                        onSelect={setCheckIn}
-                        initialFocus
-                        disabled={(date) => date < new Date()}
-                        className="pointer-events-auto"
-                      />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-medium">Check-out Date</label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "w-full justify-start text-left font-normal",
-                          !checkOut && "text-muted-foreground"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {checkOut ? format(checkOut, "PPP") : <span>Pick a date</span>}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0">
-                      <Calendar
-                        mode="single"
-                        selected={checkOut}
-                        onSelect={setCheckOut}
-                        initialFocus
-                        disabled={(date) => 
-                          date < new Date() || (checkIn ? date <= checkIn : false)
-                        }
-                        className="pointer-events-auto"
-                      />
-                    </PopoverContent>
-                  </Popover>
-                </div>
+              <div className="space-y-2">
+                <label htmlFor="guests" className="text-sm font-medium">Number of Guests</label>
+                <Select value={guests} onValueChange={setGuests} required>
+                  <SelectTrigger id="guests">
+                    <SelectValue placeholder="Select Number" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="1">1 Guest</SelectItem>
+                    <SelectItem value="2">2 Guests</SelectItem>
+                    <SelectItem value="3">3 Guests</SelectItem>
+                    <SelectItem value="4">4 Guests</SelectItem>
+                    <SelectItem value="5+">5+ Guests</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Check-in Date</label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant={"outline"}
+                      className={cn(
+                        "w-full justify-start text-left font-normal",
+                        !checkIn && "text-muted-foreground"
+                      )}
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {checkIn ? format(checkIn, "PPP") : <span>Pick a date</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0">
+                    <Calendar
+                      mode="single"
+                      selected={checkIn}
+                      onSelect={setCheckIn}
+                      initialFocus
+                      disabled={(date) => date < new Date()}
+                      className="pointer-events-auto"
+                    />
+                  </PopoverContent>
+                </Popover>
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="special-requests" className="text-sm font-medium">Special Requests</label>
-                <textarea 
-                  id="special-requests" 
-                  value={specialRequests}
-                  onChange={(e) => setSpecialRequests(e.target.value)}
-                  placeholder="Any special requirements or requests..." 
-                  rows={4}
-                  className="w-full p-2 border rounded"
-                ></textarea>
+                <label className="text-sm font-medium">Check-out Date</label>
+                <Popover>
+                  <PopoverTrigger asChild>
+                    <Button
+                      variant={"outline"}
+                      className={cn(
+                        "w-full justify-start text-left font-normal",
+                        !checkOut && "text-muted-foreground"
+                      )}
+                    >
+                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      {checkOut ? format(checkOut, "PPP") : <span>Pick a date</span>}
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent className="w-auto p-0">
+                    <Calendar
+                      mode="single"
+                      selected={checkOut}
+                      onSelect={setCheckOut}
+                      initialFocus
+                      disabled={(date) => 
+                        date < new Date() || (checkIn ? date <= checkIn : false)
+                      }
+                      className="pointer-events-auto"
+                    />
+                  </PopoverContent>
+                </Popover>
               </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-[#4CAF50] hover:bg-[#388E3C] text-white transition-colors"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Sending..." : "Complete Booking"}
-              </Button>
-            </form>
-          </div>
-          <div className="text-center text-sm text-gray-500 p-4 border-t">
-            We'll respond to your booking request within 24 hours
-          </div>
-        </Card>
-      </div>
+            </div>
+            
+            <div className="space-y-2">
+              <label htmlFor="special-requests" className="text-sm font-medium">Special Requests</label>
+              <textarea 
+                id="special-requests" 
+                value={specialRequests}
+                onChange={(e) => setSpecialRequests(e.target.value)}
+                placeholder="Any special requirements or requests..." 
+                rows={4}
+                className="w-full p-2 border rounded"
+              ></textarea>
+            </div>
+            
+            <Button 
+              type="submit" 
+              className="w-full bg-[#4CAF50] hover:bg-[#388E3C] text-white transition-colors"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Complete Booking"}
+            </Button>
+          </form>
+        </div>
+        <div className="text-center text-sm text-gray-500 p-4 border-t">
+          We'll respond to your booking request within 24 hours
+        </div>
+      </Card>
     </div>
   );
 };
 
 const BookingForm: React.FC = () => {
   return (
-    <>
-      <SimpleBookingForm />
-      <FullBookingForm />
-    </>
+    <SimpleBookingForm />
   );
 };
 
