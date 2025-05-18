@@ -16,29 +16,38 @@ type Room = {
 
 const rooms: Room[] = [
   {
-    id: "standard",
-    name: "Standard Room",
-    description: "Comfortable and cozy room perfect for solo travelers or couples.",
-    price: 75,
+    id: "deluxe-twin",
+    name: "Deluxe Twin Bed Room",
+    description: "Elegant room with two comfortable twin beds, perfect for friends or colleagues traveling together.",
+    price: 95,
     capacity: 2,
-    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom"]
+    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"]
   },
   {
-    id: "deluxe",
-    name: "Deluxe Room",
-    description: "Spacious room with a king-sized bed and additional amenities for extra comfort.",
-    price: 120,
-    capacity: 2,
+    id: "deluxe-single",
+    name: "Deluxe Single Bed Room",
+    description: "Premium single room with luxurious furnishings and all modern amenities for a comfortable stay.",
+    price: 85,
+    capacity: 1,
     image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Coffee Maker"]
+    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Work Desk"]
   },
   {
-    id: "family",
-    name: "Family Suite",
-    description: "Perfect for families, featuring separate rooms and ample space for everyone.",
-    price: 180,
-    capacity: 4,
+    id: "budget-single",
+    name: "Budget Single Bed Room",
+    description: "Cozy and economical room for solo travelers who want comfort without unnecessary extras.",
+    price: 60,
+    capacity: 1,
+    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Shared Bathroom"]
+  },
+  {
+    id: "triple",
+    name: "Triple Bed Room",
+    description: "Spacious room with three beds, ideal for families or small groups traveling together.",
+    price: 140,
+    capacity: 3,
     image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Multiple Beds", "Lounge Area"]
   }
@@ -49,11 +58,11 @@ const RoomSection: React.FC = () => {
     <section id="rooms" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-primary mb-3">Our Accommodations</h2>
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-[#800000] mb-3">Our Accommodations</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">Choose from our selection of comfortable and elegant rooms, designed to make your stay memorable.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
           {rooms.map((room) => (
             <div key={room.id} className="room-card h-full">
               <Card className="h-full flex flex-col">
@@ -62,8 +71,8 @@ const RoomSection: React.FC = () => {
                 </div>
                 <CardHeader className="pb-3">
                   <div className="flex justify-between items-center">
-                    <CardTitle className="text-xl font-playfair text-primary">{room.name}</CardTitle>
-                    <Badge className="bg-secondary text-primary font-medium">
+                    <CardTitle className="text-xl font-playfair text-[#800000]">{room.name}</CardTitle>
+                    <Badge className="bg-[#4CAF50] text-white font-medium">
                       ${room.price}/night
                     </Badge>
                   </div>
@@ -83,7 +92,7 @@ const RoomSection: React.FC = () => {
                 </CardContent>
                 <CardFooter className="pt-0">
                   <a href="#booking" className="w-full">
-                    <Button className="w-full bg-primary hover:bg-primary-light transition-colors">
+                    <Button className="w-full bg-[#800000] hover:bg-[#990000] transition-colors">
                       Book Now
                     </Button>
                   </a>

@@ -35,14 +35,14 @@ const slides = [
 
 const HeroSlider: React.FC = () => {
   return (
-    <div className="relative h-[80vh] min-h-[600px] bg-[#800000]">
+    <div className="relative h-[80vh] min-h-[600px] bg-[#800000] w-full">
       <Carousel className="w-full h-full" opts={{ loop: true }}>
         <CarouselContent className="h-full">
           {slides.map((slide) => (
-            <CarouselItem key={slide.id} className="h-full">
-              {/* Background image with overlay */}
+            <CarouselItem key={slide.id} className="h-full w-full p-0">
+              {/* Background image with overlay - full width */}
               <div 
-                className="absolute inset-0 bg-cover bg-center" 
+                className="absolute inset-0 bg-cover bg-center w-full" 
                 style={{ backgroundImage: `url('${slide.image}')` }}
               >
                 <div className="absolute inset-0 bg-[#800000] opacity-50"></div>

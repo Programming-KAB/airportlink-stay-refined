@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-primary shadow-md">
+    <nav className="sticky top-0 z-50 bg-[#800000] shadow-md">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
@@ -85,35 +85,35 @@ const Navbar: React.FC = () => {
             <div className="flex flex-col space-y-4">
               <Link 
                 to="/" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </Link>
               <a 
                 href="#rooms" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Rooms
               </a>
               <a 
                 href="#about" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </a>
               <a 
                 href="#amenities" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Amenities
               </a>
               <a 
                 href="#contact" 
-                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-primary-light transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact

@@ -9,6 +9,7 @@ import ContactSection from '@/components/ContactSection';
 import BookingForm from '@/components/BookingForm';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
+import FloatingChat from '@/components/FloatingChat';
 
 const Index = () => {
   // Add scroll effect for sections
@@ -41,6 +42,7 @@ const Index = () => {
     <div className="min-h-screen bg-[#F2FCE2]">
       <Navbar />
       <HeroSlider />
+      <BookingForm />
       
       <div className="section-fade-in" id="rooms">
         <RoomSection />
@@ -62,15 +64,8 @@ const Index = () => {
         <ContactSection />
       </div>
       
-      <div className="section-fade-in bg-[#F2FCE2]" id="booking">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-2xl mx-auto">
-            <BookingForm />
-          </div>
-        </div>
-      </div>
-      
       <Footer />
+      <FloatingChat />
     </div>
   );
 };
