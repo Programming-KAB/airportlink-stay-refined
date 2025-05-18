@@ -1,12 +1,76 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import RoomSection from '@/components/RoomSection';
+import AboutSection from '@/components/AboutSection';
+import AmenitiesSection from '@/components/AmenitiesSection';
+import ContactSection from '@/components/ContactSection';
+import BookingForm from '@/components/BookingForm';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  // Add scroll effect for sections
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('.section-fade-in');
+      sections.forEach(section => {
+        const sectionTop = (section as HTMLElement).getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.75) {
+          section.classList.add('visible');
+        }
+      });
+    };
+
+    // Initial check
+    handleScroll();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <Hero />
+      
+      <div className="section-fade-in">
+        <RoomSection />
       </div>
+      
+      <div className="section-fade-in">
+        <AboutSection />
+      </div>
+      
+      <div className="section-fade-in">
+        <AmenitiesSection />
+      </div>
+      
+      <div className="section-fade-in">
+        <TestimonialsSection />
+      </div>
+      
+      <div className="section-fade-in">
+        <ContactSection />
+      </div>
+      
+      <div className="section-fade-in" id="booking">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-2xl mx-auto">
+            <BookingForm />
+          </div>
+        </div>
+      </div>
+      
+      <Footer />
     </div>
   );
 };
