@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { 
   Carousel, 
@@ -8,6 +8,8 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from '@/components/ui/carousel';
+import { useCarousel } from '@/components/ui/carousel';
+import { type UseEmblaCarouselType } from 'embla-carousel-react';
 
 const slides = [
   {
@@ -41,22 +43,46 @@ const slides = [
 ];
 
 const HeroSlider: React.FC = () => {
+  // Create a ref to store the carousel API
+  const emblaApiRef = useRef<UseEmblaCarouselType[1]>(null);
+  
+  // Set up auto-sliding every 10 seconds
+  useEffect(() => {
+    const autoSlideInterval = setInterval(() => {
+      if (emblaApiRef.current && emblaApiRef.current.canScrollNext()) {
+        emblaApiRef.current.scrollNext();
+      } else if (emblaApiRef.current) {
+        // If we can't scroll next, it means we're at the end, so go back to the first slide
+        emblaApiRef.current.scrollTo(0);
+      }
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(autoSlideInterval);
+  }, []);
+
+  // Function to store the embla API
+  const setEmblaApi = (emblaApi: UseEmblaCarouselType[1]) => {
+    emblaApiRef.current = emblaApi;
+  };
+
   return (
     <div className="relative h-[80vh] min-h-[600px] bg-[#800000] w-full overflow-hidden">
-      <Carousel className="w-full h-full" opts={{ loop: true }}>
+      <Carousel className="w-full h-full" opts={{ loop: true }} setApi={setEmblaApi}>
         <CarouselContent className="h-full">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="h-full w-full p-0">
-              {/* Background image with overlay - full width and height */}
+              {/* Background image covering full slider area */}
               <div 
-                className="absolute inset-0 bg-center bg-no-repeat w-full h-full" 
+                className="absolute inset-0 w-full h-full"
                 style={{ 
                   backgroundImage: `url('${slide.image}')`,
-                  backgroundSize: 'cover'
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
                 }}
               >
-                {/* Semi-transparent overlay using the brand color */}
-                <div className="absolute inset-0 bg-[#800000] opacity-40"></div>
+                {/* Semi-transparent deep red overlay for better text visibility */}
+                <div className="absolute inset-0 bg-[#800000] opacity-60"></div>
               </div>
 
               {/* Content */}
