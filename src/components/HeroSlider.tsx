@@ -42,26 +42,26 @@ const slides = [
 
 const HeroSlider: React.FC = () => {
   return (
-    <div className="relative h-[80vh] min-h-[600px] bg-[#800000] w-full">
+    <div className="relative h-[80vh] min-h-[600px] bg-[#800000] w-full overflow-hidden">
       <Carousel className="w-full h-full" opts={{ loop: true }}>
         <CarouselContent className="h-full">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="h-full w-full p-0">
               {/* Background image with overlay - full width and height */}
               <div 
-                className="absolute inset-0 bg-cover bg-center w-full h-full" 
+                className="absolute inset-0 bg-center bg-no-repeat w-full h-full" 
                 style={{ 
                   backgroundImage: `url('${slide.image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
+                  backgroundSize: 'cover'
                 }}
               >
-                <div className="absolute inset-0 bg-[#800000] opacity-50"></div>
+                {/* Semi-transparent overlay using the brand color */}
+                <div className="absolute inset-0 bg-[#800000] opacity-40"></div>
               </div>
 
               {/* Content */}
-              <div className="relative container mx-auto h-full flex items-center px-4">
-                <div className="max-w-2xl text-white">
+              <div className="relative h-full container mx-auto flex items-center px-4">
+                <div className="max-w-2xl text-white z-10">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mb-4">
                     {slide.title}
                   </h1>
@@ -70,7 +70,7 @@ const HeroSlider: React.FC = () => {
                   </p>
                   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <a href={slide.id === 2 ? "#amenities" : slide.id === 3 ? "#booking" : "#rooms"}>
-                      <Button className="bg-[#4CAF50] hover:bg-[#388E3C] text-white transition-colors text-lg px-8 py-6">
+                      <Button className="bg-[#FFA500] hover:bg-[#E69500] text-white transition-colors text-lg px-8 py-6">
                         {slide.buttonText}
                       </Button>
                     </a>
