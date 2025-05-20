@@ -13,28 +13,28 @@ import {
 const slides = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1920&q=80",
     title: "Comfortable & Spacious Accommodations",
     description: "Experience our well-appointed triple rooms with premium bedding, modern amenities, and a tranquil atmosphere. Perfect for families or groups traveling together.",
     buttonText: "Explore Our Rooms"
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80",
     title: "Relaxing Outdoor Space",
     description: "Unwind in our peaceful outdoor seating area surrounded by greenery. The perfect spot to enjoy your morning coffee or evening refreshments after a day of travel.",
     buttonText: "View Our Amenities"
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1920&q=80",
     title: "Cozy Single Accommodations",
     description: "Our single rooms offer comfort and convenience for the solo traveler. Enjoy quality bedding and a peaceful atmosphere with easy airport access.",
     buttonText: "Book Now"
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80",
     title: "Premium Triple Rooms",
     description: "Spacious triple rooms ideal for groups or families, featuring comfortable beds and all the amenities you need for a relaxing stay near the airport.",
     buttonText: "See Availability"
@@ -71,12 +71,9 @@ const HeroSlider: React.FC = () => {
             <CarouselItem key={slide.id} className="h-full w-full p-0">
               {/* Background image covering full slider area */}
               <div 
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full h-full bg-cover bg-center"
                 style={{ 
-                  backgroundImage: `url('${slide.image}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat'
+                  backgroundImage: `url(${slide.image})`,
                 }}
               >
                 {/* Semi-transparent deep red overlay for better text visibility */}
