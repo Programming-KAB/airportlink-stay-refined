@@ -6,10 +6,9 @@ import {
   CarouselContent, 
   CarouselItem, 
   CarouselNext, 
-  CarouselPrevious 
+  CarouselPrevious,
+  type CarouselApi
 } from '@/components/ui/carousel';
-import { useCarousel } from '@/components/ui/carousel';
-import { type UseEmblaCarouselType } from 'embla-carousel-react';
 
 const slides = [
   {
@@ -44,30 +43,29 @@ const slides = [
 
 const HeroSlider: React.FC = () => {
   // Create a ref to store the carousel API
-  const emblaApiRef = useRef<UseEmblaCarouselType[1]>(null);
+  const [api, setApi] = React.useState<CarouselApi>();
   
   // Set up auto-sliding every 10 seconds
   useEffect(() => {
+    if (!api) {
+      return;
+    }
+
     const autoSlideInterval = setInterval(() => {
-      if (emblaApiRef.current && emblaApiRef.current.canScrollNext()) {
-        emblaApiRef.current.scrollNext();
-      } else if (emblaApiRef.current) {
+      if (api.canScrollNext()) {
+        api.scrollNext();
+      } else {
         // If we can't scroll next, it means we're at the end, so go back to the first slide
-        emblaApiRef.current.scrollTo(0);
+        api.scrollTo(0);
       }
     }, 10000); // 10 seconds
 
     return () => clearInterval(autoSlideInterval);
-  }, []);
-
-  // Function to store the embla API
-  const setEmblaApi = (emblaApi: UseEmblaCarouselType[1]) => {
-    emblaApiRef.current = emblaApi;
-  };
+  }, [api]);
 
   return (
     <div className="relative h-[80vh] min-h-[600px] bg-[#800000] w-full overflow-hidden">
-      <Carousel className="w-full h-full" opts={{ loop: true }} setApi={setEmblaApi}>
+      <Carousel className="w-full h-full" opts={{ loop: true }} setApi={setApi}>
         <CarouselContent className="h-full">
           {slides.map((slide) => (
             <CarouselItem key={slide.id} className="h-full w-full p-0">
