@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
@@ -215,7 +214,7 @@ const FullBookingForm: React.FC<FullBookingFormProps> = ({
     
     // Prepare the email data
     const emailData = {
-      to: 'info@airportlinkguesthouse.com',
+      to: 'briankasozi@gmail.com', // Updated email recipient here
       subject: 'New Booking Request',
       body: `
         Name: ${name}
