@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { 
   Carousel, 
@@ -80,13 +80,13 @@ const HeroSlider: React.FC = () => {
                 <div className="absolute inset-0 bg-[#800000] opacity-60"></div>
               </div>
 
-              {/* Content */}
+              {/* Marketing text overlay in the style from the screenshot */}
               <div className="relative h-full container mx-auto flex items-center px-4">
                 <div className="max-w-2xl text-white z-10">
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold mb-4">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-playfair font-bold mb-4 tracking-tight leading-tight">
                     {slide.title}
                   </h1>
-                  <p className="text-lg md:text-xl opacity-90 mb-8">
+                  <p className="text-xl md:text-2xl opacity-90 mb-10 leading-relaxed">
                     {slide.description}
                   </p>
                   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
