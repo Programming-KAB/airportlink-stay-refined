@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -19,7 +18,7 @@ const FeaturedRooms: React.FC = () => {
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80" 
+                src="https://airportlinkguesthouse.com/air/Double_Bed.jpg" 
                 alt="Deluxe Twin Room" 
                 className="w-full h-full object-cover"
               />
@@ -42,7 +41,7 @@ const FeaturedRooms: React.FC = () => {
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                src="https://airportlinkguesthouse.com/air/Single_bed_in.jpg" 
                 alt="Deluxe Single Room" 
                 className="w-full h-full object-cover"
               />
@@ -65,7 +64,7 @@ const FeaturedRooms: React.FC = () => {
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80" 
+                src="https://airportlinkguesthouse.com/air/Outside_sits.jpg" 
                 alt="Budget Single Room" 
                 className="w-full h-full object-cover"
               />
@@ -88,7 +87,7 @@ const FeaturedRooms: React.FC = () => {
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                src="https://airportlinkguesthouse.com/air/Double_Bed.jpg" 
                 alt="Extra Bed" 
                 className="w-full h-full object-cover"
               />

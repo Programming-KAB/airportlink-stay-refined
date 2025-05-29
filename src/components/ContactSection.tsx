@@ -1,7 +1,10 @@
-
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
 
 const ContactSection: React.FC = () => {
   return (
@@ -34,7 +37,7 @@ const ContactSection: React.FC = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-gray-700">123 Airport Road, Airport City</p>
+                  <p className="text-gray-700">Buwaya Rise Road Entebbe</p>
                 </CardContent>
               </Card>
 
@@ -45,7 +48,7 @@ const ContactSection: React.FC = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-gray-700">+123 456 7890</p>
+                  <p className="text-gray-700">+256 773 112 692</p>
                 </CardContent>
               </Card>
 
@@ -89,8 +92,39 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          <div id="booking">
-            {/* This will be filled by the BookingForm component */}
+          <div id="contact-form">
+            <Card className="p-6 shadow-lg rounded-lg bg-gradient-to-br from-[#F2FCE2] to-white">
+              <CardHeader className="text-center pb-6">
+                <CardTitle className="text-3xl font-playfair font-bold text-[#800000]">Send us a Message</CardTitle>
+                <CardDescription className="text-gray-600">We'd love to hear from you!</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input id="name" placeholder="Your Name" className="border-[#800000]/30 focus-visible:ring-[#FFA500]" />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input id="email" type="email" placeholder="your@email.com" className="border-[#800000]/30 focus-visible:ring-[#FFA500]" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="contact">Contact / WhatsApp Number</Label>
+                    <Input id="contact" placeholder="+256 77..." className="border-[#800000]/30 focus-visible:ring-[#FFA500]" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea id="message" placeholder="Your message here..." className="border-[#800000]/30 focus-visible:ring-[#FFA500] h-32" />
+                  </div>
+                  <div className="flex justify-end space-x-4">
+                    <Button variant="outline" type="button" className="border-[#800000] text-[#800000] hover:bg-[#800000]/10">Cancel</Button>
+                    <Button type="submit" className="bg-[#FFA500] hover:bg-[#E69500] text-white">Send Message</Button>
+                  </div>
+                </form>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>

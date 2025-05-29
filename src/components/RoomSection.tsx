@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +20,7 @@ const rooms: Room[] = [
     description: "Elegant room with two comfortable twin beds, perfect for friends or colleagues traveling together.",
     price: 95,
     capacity: 2,
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
+    image: "https://airportlinkguesthouse.com/air/Double_Bed.jpg",
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"]
   },
   {
@@ -30,7 +29,7 @@ const rooms: Room[] = [
     description: "Premium single room with luxurious furnishings and all modern amenities for a comfortable stay.",
     price: 60,
     capacity: 1,
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image: "https://airportlinkguesthouse.com/air/Single_bed_in.jpg",
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Work Desk"]
   },
   {
@@ -39,7 +38,7 @@ const rooms: Room[] = [
     description: "Additional comfortable bed that can be added to any room for extra guests.",
     price: 35,
     capacity: 1,
-    image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    image: "https://airportlinkguesthouse.com/air/Outside_sits.jpg",
     features: ["Comfortable Bedding", "Can be added to any room", "Perfect for families", "Additional guest accommodation"]
   }
 ];

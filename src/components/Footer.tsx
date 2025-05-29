@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -10,6 +9,13 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
+            <div className="flex items-center mb-4">
+              <img 
+                src="https://www.airportlinkguesthouse.com/wp-content/uploads/2019/06/logo-white.png"
+                alt="Airport Link Guesthouse" 
+                className="h-12"
+              />
+            </div>
             <h3 className="text-2xl font-playfair mb-4">Airport Link <span className="text-secondary">Guesthouse</span></h3>
             <p className="mb-4 text-gray-300">Experience comfort and convenience near the airport. Your home away from home.</p>
           </div>
@@ -32,11 +38,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-start">
                 <span className="mr-2">📍</span>
-                <span>123 Airport Road, Airport City</span>
+                <span>Buwaya Rise Road Entebbe</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">📞</span>
-                <span>+123 456 7890</span>
+                <span>+256 773 112 692</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">✉️</span>
@@ -79,9 +85,16 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-700">
-          <p className="text-center text-gray-400">
-            &copy; {currentYear} Airport Link Guesthouse. All rights reserved.
-          </p>
+          <div className="flex justify-between items-center">
+            <p className="text-center text-gray-400">
+              &copy; {currentYear} Airport Link Guesthouse. All rights reserved.
+            </p>
+            <img 
+              src="https://www.airportlinkguesthouse.com/wp-content/uploads/2019/06/logo-white.png"
+              alt="Airport Link Guesthouse" 
+              className="h-12"
+            />
+          </div>
         </div>
       </div>
     </footer>

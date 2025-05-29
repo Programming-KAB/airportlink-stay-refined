@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const AboutSection: React.FC = () => {
   return (
@@ -25,39 +25,39 @@ const AboutSection: React.FC = () => {
               spotless rooms, and exceptional service to make your stay unforgettable.
             </p>
             <div className="flex space-x-4">
-              <a href="#amenities">
+              <Link to="/amenities">
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 transition-colors">
                   Our Amenities
                 </Button>
-              </a>
-              <a href="#contact">
+              </Link>
+              <Link to="/contact">
                 <Button className="bg-secondary hover:bg-secondary-dark text-primary-dark transition-colors">
                   Contact Us
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img 
-                src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" 
+                src="https://airportlinkguesthouse.com/air/Double_Bed.jpg" 
                 alt="Guesthouse exterior" 
                 className="rounded-lg shadow-md hover-scale h-64 object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                src="https://airportlinkguesthouse.com/air/Outside_sits.jpg" 
                 alt="Guesthouse dining area" 
                 className="rounded-lg shadow-md hover-scale h-40 object-cover"
               />
             </div>
             <div className="space-y-4">
               <img 
-                src="https://images.unsplash.com/photo-1584132905271-512c958d674a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                src="https://airportlinkguesthouse.com/air/Single_bed_in.jpg" 
                 alt="Guesthouse lounge" 
                 className="rounded-lg shadow-md hover-scale h-40 object-cover"
               />
               <img 
-                src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                src="https://airportlinkguesthouse.com/air/Out_View.jpeg" 
                 alt="Guesthouse bedroom" 
                 className="rounded-lg shadow-md hover-scale h-64 object-cover"
               />
