@@ -34,15 +34,6 @@ const rooms: Room[] = [
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Work Desk"]
   },
   {
-    id: "budget-single",
-    name: "Budget Single Bed Room",
-    description: "Cozy and economical room for solo travelers who want comfort without unnecessary extras.",
-    price: 60,
-    capacity: 1,
-    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80",
-    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Shared Bathroom"]
-  },
-  {
     id: "extra-bed",
     name: "Extra Bed",
     description: "Additional comfortable bed that can be added to any room for extra guests.",
@@ -62,7 +53,7 @@ const RoomSection: React.FC = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">Choose from our selection of comfortable and elegant rooms, designed to make your stay memorable.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {rooms.map((room) => (
             <div key={room.id} className="room-card h-full">
               <Card className="h-full flex flex-col">
