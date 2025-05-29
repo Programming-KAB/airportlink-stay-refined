@@ -28,7 +28,7 @@ const rooms: Room[] = [
     id: "deluxe-single",
     name: "Deluxe Single Bed Room",
     description: "Premium single room with luxurious furnishings and all modern amenities for a comfortable stay.",
-    price: 85,
+    price: 60,
     capacity: 1,
     image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Work Desk"]
@@ -46,10 +46,10 @@ const rooms: Room[] = [
     id: "triple",
     name: "Triple Bed Room",
     description: "Spacious room with three beds, ideal for families or small groups traveling together.",
-    price: 140,
+    price: 95,
     capacity: 3,
     image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Multiple Beds", "Lounge Area"]
+    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Multiple Beds", "Lounge Area", "Extra bed available (+$35)"]
   }
 ];
 

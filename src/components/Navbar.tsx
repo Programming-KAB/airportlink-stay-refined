@@ -2,6 +2,13 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +43,40 @@ const Navbar: React.FC = () => {
             <Link to="/amenities" className="font-medium text-white hover:text-secondary transition-colors">
               Amenities
             </Link>
+            
+            {/* Menu Dropdown */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-white hover:text-secondary hover:bg-[#990000] data-[state=open]:bg-[#990000]">
+                    Our Menu
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="p-4 w-80">
+                      <div className="space-y-3">
+                        <div className="border-b pb-2">
+                          <h4 className="font-semibold text-lg text-[#800000]">Continental Breakfast</h4>
+                          <p className="text-gray-600 text-sm">Complimentary with your stay</p>
+                        </div>
+                        <div className="border-b pb-2">
+                          <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
+                            Lunch <span className="text-[#4CAF50]">$10</span>
+                          </h4>
+                          <p className="text-gray-600 text-sm">2-course meal</p>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
+                            Dinner <span className="text-[#4CAF50]">$15</span>
+                          </h4>
+                          <p className="text-gray-600 text-sm">3-course meal</p>
+                        </div>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            
             <Link to="/contact" className="font-medium text-white hover:text-secondary transition-colors">
               Contact
             </Link>
@@ -111,6 +152,17 @@ const Navbar: React.FC = () => {
               >
                 Amenities
               </Link>
+              
+              {/* Mobile Menu Items */}
+              <div className="px-3 py-2">
+                <h4 className="font-medium text-white mb-2">Our Menu</h4>
+                <div className="ml-4 space-y-1 text-sm">
+                  <div className="text-gray-300">Continental Breakfast - Complimentary</div>
+                  <div className="text-gray-300">Lunch - $10 (2-course)</div>
+                  <div className="text-gray-300">Dinner - $15 (3-course)</div>
+                </div>
+              </div>
+              
               <Link 
                 to="/contact" 
                 className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
