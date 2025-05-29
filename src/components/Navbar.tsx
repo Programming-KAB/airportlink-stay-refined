@@ -55,26 +55,26 @@ const Navbar: React.FC = () => {
                     <div className="p-4 w-80">
                       <div className="space-y-3">
                         <div className="border-b pb-2">
-                          <a href="#continental-breakfast" className="block hover:bg-gray-50 p-2 rounded">
-                            <h4 className="font-semibold text-lg text-[#800000]">Continental Breakfast</h4>
+                          <Link to="/continental" className="block hover:bg-gray-50 p-2 rounded">
+                            <h4 className="font-semibold text-lg text-[#800000]">Continental Dish</h4>
                             <p className="text-gray-600 text-sm">Complimentary with your stay</p>
-                          </a>
+                          </Link>
                         </div>
                         <div className="border-b pb-2">
-                          <a href="#lunch" className="block hover:bg-gray-50 p-2 rounded">
+                          <Link to="/lunch" className="block hover:bg-gray-50 p-2 rounded">
                             <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
                               Lunch <span className="text-[#4CAF50]">$10</span>
                             </h4>
                             <p className="text-gray-600 text-sm">2-course meal</p>
-                          </a>
+                          </Link>
                         </div>
                         <div>
-                          <a href="#dinner" className="block hover:bg-gray-50 p-2 rounded">
+                          <Link to="/dinner" className="block hover:bg-gray-50 p-2 rounded">
                             <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
                               Dinner <span className="text-[#4CAF50]">$15</span>
                             </h4>
                             <p className="text-gray-600 text-sm">3-course meal</p>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -163,15 +163,15 @@ const Navbar: React.FC = () => {
               <div className="px-3 py-2">
                 <h4 className="font-medium text-white mb-2">Our Menu</h4>
                 <div className="ml-4 space-y-1 text-sm">
-                  <a href="#continental-breakfast" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
-                    Continental Breakfast - Complimentary
-                  </a>
-                  <a href="#lunch" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                  <Link to="/continental" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                    Continental Dish - Complimentary
+                  </Link>
+                  <Link to="/lunch" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
                     Lunch - $10 (2-course)
-                  </a>
-                  <a href="#dinner" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                  </Link>
+                  <Link to="/dinner" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
                     Dinner - $15 (3-course)
-                  </a>
+                  </Link>
                 </div>
               </div>
               
