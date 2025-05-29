@@ -51,7 +51,7 @@ const FeaturedRooms: React.FC = () => {
               <h3 className="text-xl font-playfair font-bold text-[#800000] mb-2">Deluxe Single</h3>
               <p className="text-gray-600 mb-4">Premium room with luxurious furnishings and modern amenities.</p>
               <div className="flex justify-between items-center">
-                <span className="text-lg font-bold text-[#4CAF50]">$85/night</span>
+                <span className="text-lg font-bold text-[#4CAF50]">$60/night</span>
                 <Link to="/rooms">
                   <Button size="sm" className="bg-[#800000] hover:bg-[#600000] text-white">
                     View Details
@@ -84,20 +84,20 @@ const FeaturedRooms: React.FC = () => {
             </div>
           </div>
           
-          {/* Room Card 4 */}
+          {/* Room Card 4 - Changed to Extra Bed */}
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
-                alt="Triple Bed Room" 
+                alt="Extra Bed" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-playfair font-bold text-[#800000] mb-2">Triple Room</h3>
-              <p className="text-gray-600 mb-4">Spacious room with three beds for families or groups.</p>
+              <h3 className="text-xl font-playfair font-bold text-[#800000] mb-2">Extra Bed</h3>
+              <p className="text-gray-600 mb-4">Additional comfortable bed for any room accommodation.</p>
               <div className="flex justify-between items-center">
-                <span className="text-lg font-bold text-[#4CAF50]">$140/night</span>
+                <span className="text-lg font-bold text-[#4CAF50]">$35/night</span>
                 <Link to="/rooms">
                   <Button size="sm" className="bg-[#800000] hover:bg-[#600000] text-white">
                     View Details

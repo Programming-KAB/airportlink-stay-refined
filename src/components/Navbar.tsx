@@ -55,20 +55,26 @@ const Navbar: React.FC = () => {
                     <div className="p-4 w-80">
                       <div className="space-y-3">
                         <div className="border-b pb-2">
-                          <h4 className="font-semibold text-lg text-[#800000]">Continental Breakfast</h4>
-                          <p className="text-gray-600 text-sm">Complimentary with your stay</p>
+                          <a href="#continental-breakfast" className="block hover:bg-gray-50 p-2 rounded">
+                            <h4 className="font-semibold text-lg text-[#800000]">Continental Breakfast</h4>
+                            <p className="text-gray-600 text-sm">Complimentary with your stay</p>
+                          </a>
                         </div>
                         <div className="border-b pb-2">
-                          <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
-                            Lunch <span className="text-[#4CAF50]">$10</span>
-                          </h4>
-                          <p className="text-gray-600 text-sm">2-course meal</p>
+                          <a href="#lunch" className="block hover:bg-gray-50 p-2 rounded">
+                            <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
+                              Lunch <span className="text-[#4CAF50]">$10</span>
+                            </h4>
+                            <p className="text-gray-600 text-sm">2-course meal</p>
+                          </a>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
-                            Dinner <span className="text-[#4CAF50]">$15</span>
-                          </h4>
-                          <p className="text-gray-600 text-sm">3-course meal</p>
+                          <a href="#dinner" className="block hover:bg-gray-50 p-2 rounded">
+                            <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
+                              Dinner <span className="text-[#4CAF50]">$15</span>
+                            </h4>
+                            <p className="text-gray-600 text-sm">3-course meal</p>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -157,9 +163,15 @@ const Navbar: React.FC = () => {
               <div className="px-3 py-2">
                 <h4 className="font-medium text-white mb-2">Our Menu</h4>
                 <div className="ml-4 space-y-1 text-sm">
-                  <div className="text-gray-300">Continental Breakfast - Complimentary</div>
-                  <div className="text-gray-300">Lunch - $10 (2-course)</div>
-                  <div className="text-gray-300">Dinner - $15 (3-course)</div>
+                  <a href="#continental-breakfast" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                    Continental Breakfast - Complimentary
+                  </a>
+                  <a href="#lunch" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                    Lunch - $10 (2-course)
+                  </a>
+                  <a href="#dinner" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                    Dinner - $15 (3-course)
+                  </a>
                 </div>
               </div>
               

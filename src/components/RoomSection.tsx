@@ -43,13 +43,13 @@ const rooms: Room[] = [
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Shared Bathroom"]
   },
   {
-    id: "triple",
-    name: "Triple Bed Room",
-    description: "Spacious room with three beds, ideal for families or small groups traveling together.",
-    price: 95,
-    capacity: 3,
+    id: "extra-bed",
+    name: "Extra Bed",
+    description: "Additional comfortable bed that can be added to any room for extra guests.",
+    price: 35,
+    capacity: 1,
     image: "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Multiple Beds", "Lounge Area", "Extra bed available (+$35)"]
+    features: ["Comfortable Bedding", "Can be added to any room", "Perfect for families", "Additional guest accommodation"]
   }
 ];
 
