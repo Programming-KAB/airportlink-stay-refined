@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { MessageCircle, X, Facebook } from 'lucide-react';
 
@@ -15,7 +14,7 @@ const FloatingChat: React.FC = () => {
       {isOpen && (
         <div className="flex flex-col items-end space-y-4 mb-4 animate-fade-in">
           <a 
-            href="https://wa.me/123456789" 
+            href="https://wa.me/256773112692" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center bg-[#25D366] text-white py-2 px-4 rounded-full hover:bg-opacity-90 transition-all"
@@ -27,7 +26,7 @@ const FloatingChat: React.FC = () => {
           </a>
           
           <a 
-            href="https://m.me/airportlinkguesthouse" 
+            href="https://m.me/Airportlinkuganda" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center bg-[#0078FF] text-white py-2 px-4 rounded-full hover:bg-opacity-90 transition-all"
