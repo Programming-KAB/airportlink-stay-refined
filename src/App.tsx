@@ -13,6 +13,7 @@ import Amenities from "./pages/Amenities";
 import Continental from "./pages/Continental";
 import Dinner from "./pages/Dinner";
 import Lunch from "./pages/Lunch";
+import Refreshment from "./pages/Refreshment";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/continental" element={<Continental />} />
           <Route path="/dinner" element={<Dinner />} />
           <Route path="/lunch" element={<Lunch />} />
+          <Route path="/refreshment" element={<Refreshment />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

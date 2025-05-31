@@ -68,12 +68,18 @@ const Navbar: React.FC = () => {
                             <p className="text-gray-600 text-sm">2-course meal</p>
                           </Link>
                         </div>
-                        <div>
+                        <div className="border-b pb-2">
                           <Link to="/dinner" className="block hover:bg-gray-50 p-2 rounded">
                             <h4 className="font-semibold text-lg text-[#800000] flex justify-between">
                               Dinner <span className="text-[#4CAF50]">$15</span>
                             </h4>
                             <p className="text-gray-600 text-sm">3-course meal</p>
+                          </Link>
+                        </div>
+                        <div>
+                          <Link to="/refreshment" className="block hover:bg-gray-50 p-2 rounded">
+                            <h4 className="font-semibold text-lg text-[#800000]">Refreshment Suggestions</h4>
+                            <p className="text-gray-600 text-sm">Drinks, juices, teas & coffees</p>
                           </Link>
                         </div>
                       </div>
@@ -171,6 +177,9 @@ const Navbar: React.FC = () => {
                   </Link>
                   <Link to="/dinner" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
                     Dinner - $15 (3-course)
+                  </Link>
+                  <Link to="/refreshment" className="block text-gray-300 hover:text-white" onClick={() => setIsMenuOpen(false)}>
+                    Refreshment Suggestions
                   </Link>
                 </div>
               </div>
