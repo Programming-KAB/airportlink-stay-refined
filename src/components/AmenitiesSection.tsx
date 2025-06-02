@@ -37,11 +37,6 @@ const amenities = [
     icon: "🔒",
     title: "24/7 Security",
     description: "Feel safe with our around-the-clock security service."
-  },
-  {
-    icon: "☕",
-    title: "Coffee & Tea",
-    description: "Complimentary coffee and tea in all rooms."
   }
 ];
 
