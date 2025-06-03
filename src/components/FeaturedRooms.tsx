@@ -19,7 +19,7 @@ const FeaturedRooms: React.FC = () => {
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://airportlinkguesthouse.com/air/Double_Bed.jpg" 
+                src="http://away2uganda.com/Air/IMG_8071.jpeg" 
                 alt="Deluxe Twin Room" 
                 className="w-full h-full object-cover"
               />

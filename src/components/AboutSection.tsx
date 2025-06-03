@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -40,8 +41,8 @@ const AboutSection: React.FC = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img 
-                src="https://airportlinkguesthouse.com/air/Double_Bed.jpg" 
-                alt="Guesthouse exterior" 
+                src="http://away2uganda.com/Air/IMG_8064.jpeg" 
+                alt="Guesthouse room" 
                 className="rounded-lg shadow-md hover-scale h-64 object-cover"
               />
               <img 
@@ -55,11 +56,6 @@ const AboutSection: React.FC = () => {
                 src="https://airportlinkguesthouse.com/air/Single_bed_in.jpg" 
                 alt="Guesthouse lounge" 
                 className="rounded-lg shadow-md hover-scale h-40 object-cover"
-              />
-              <img 
-                src="https://airportlinkguesthouse.com/air/Out_View.jpeg" 
-                alt="Guesthouse bedroom" 
-                className="rounded-lg shadow-md hover-scale h-64 object-cover"
               />
             </div>
           </div>
