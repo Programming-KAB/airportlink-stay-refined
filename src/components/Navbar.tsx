@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -92,11 +91,11 @@ const Navbar: React.FC = () => {
             <Link to="/contact" className="font-medium text-white hover:text-secondary transition-colors">
               Contact
             </Link>
-            <a href="/#booking">
+            <Link to="/booking">
               <Button className="bg-secondary hover:bg-secondary-dark text-primary-dark transition-colors">
                 Book Now
               </Button>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -191,14 +190,14 @@ const Navbar: React.FC = () => {
               >
                 Contact
               </Link>
-              <a 
-                href="/#booking"
+              <Link 
+                to="/booking"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Button className="w-full bg-secondary hover:bg-secondary-dark text-primary-dark transition-colors">
                   Book Now
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         )}
