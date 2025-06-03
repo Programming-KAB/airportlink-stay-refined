@@ -36,13 +36,6 @@ const rooms: Room[] = [
     description: "Premium single room with luxurious furnishings"
   },
   {
-    id: "budget-single",
-    name: "Budget Single Bed Room",
-    price: 45,
-    capacity: 1,
-    description: "Cozy and economical room for solo travelers"
-  },
-  {
     id: "triple",
     name: "Triple Bed Room",
     price: 120,
