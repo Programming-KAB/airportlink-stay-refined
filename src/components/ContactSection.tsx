@@ -38,7 +38,7 @@ const ContactSection: React.FC = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <p className="text-gray-700">Buwaya Rise Road Entebbe</p>
+                  <p className="text-gray-700">Plot 2 Buwaya Rise Road Entebbe</p>
                 </CardContent>
               </Card>
 
