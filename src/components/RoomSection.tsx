@@ -83,11 +83,11 @@ const RoomSection: React.FC = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="pt-0">
-                  <a href="#booking" className="w-full">
+                  <Link to={`/booking?room=${room.id}`} className="w-full">
                     <Button className="w-full bg-[#800000] hover:bg-[#990000] transition-colors">
                       Book Now
                     </Button>
-                  </a>
+                  </Link>
                 </CardFooter>
               </Card>
             </div>
