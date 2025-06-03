@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -14,7 +13,7 @@ const FeaturedRooms: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Room Card 1 */}
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
@@ -61,7 +60,30 @@ const FeaturedRooms: React.FC = () => {
             </div>
           </div>
           
-          {/* Room Card 3 - Extra Bed */}
+          {/* Room Card 3 */}
+          <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="h-48 overflow-hidden">
+              <img 
+                src="https://airportlinkguesthouse.com/air/Outside_sits.jpg" 
+                alt="Budget Single Room" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-playfair font-bold text-[#800000] mb-2">Budget Single</h3>
+              <p className="text-gray-600 mb-4">Cozy and economical room for solo travelers.</p>
+              <div className="flex justify-between items-center">
+                <span className="text-lg font-bold text-[#4CAF50]">$60/night</span>
+                <Link to="/rooms">
+                  <Button size="sm" className="bg-[#800000] hover:bg-[#600000] text-white">
+                    View Details
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          
+          {/* Room Card 4 - Changed to Extra Bed */}
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 

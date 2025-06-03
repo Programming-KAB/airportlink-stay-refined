@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 const CtaSection: React.FC = () => {
@@ -13,11 +12,11 @@ const CtaSection: React.FC = () => {
           offers the perfect accommodation solution with our convenient location and 
           comfortable rooms.
         </p>
-        <Link to="/booking">
+        <a href="#booking">
           <Button className="bg-[#4CAF50] hover:bg-[#388E3C] text-white px-8 py-3 text-lg">
             Book Your Room Now
           </Button>
-        </Link>
+        </a>
       </div>
     </div>
   );

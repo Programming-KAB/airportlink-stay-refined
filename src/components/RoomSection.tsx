@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -83,11 +81,11 @@ const RoomSection: React.FC = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="pt-0">
-                  <Link to={`/booking?room=${room.id}`} className="w-full">
+                  <a href="#booking" className="w-full">
                     <Button className="w-full bg-[#800000] hover:bg-[#990000] transition-colors">
                       Book Now
                     </Button>
-                  </Link>
+                  </a>
                 </CardFooter>
               </Card>
             </div>

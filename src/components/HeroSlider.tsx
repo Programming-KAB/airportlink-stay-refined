@@ -12,7 +12,7 @@ import {
 const slides = [
   {
     id: 1,
-    image: "http://away2uganda.com/Air/IMG_8074.jpeg",
+    image: "https://airportlinkguesthouse.com/air/Double_Bed.jpg",
     title: "Luxury Stay",
     subtitle: "Near the Airport",
     description: "Experience premium comfort with our well-appointed rooms and exceptional service.",
@@ -21,7 +21,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "http://away2uganda.com/Air/IMG_8063.jpeg",
+    image: "https://airportlinkguesthouse.com/air/Outside_sits.jpg",
     title: "Peaceful Retreat",
     subtitle: "Outdoor Oasis",
     description: "Unwind in our serene outdoor spaces, perfect for relaxation and refreshment.",
@@ -147,4 +147,3 @@ const HeroSlider: React.FC = () => {
 };
 
 export default HeroSlider;
-
