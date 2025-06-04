@@ -22,7 +22,7 @@ const rooms: Room[] = [
     description: "Elegant room with two comfortable twin beds, perfect for friends or colleagues traveling together.",
     price: 95,
     capacity: 2,
-    image: "https://airportlinkguesthouse.com/air/Double_Bed.jpg",
+    image: "http://away2uganda.com/Air/IMG_8074.jpeg",
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"]
   },
   {
@@ -40,7 +40,7 @@ const rooms: Room[] = [
     description: "Additional comfortable bed that can be added to any room for extra guests.",
     price: 35,
     capacity: 1,
-    image: "https://airportlinkguesthouse.com/air/Outside_sits.jpg",
+    image: "http://away2uganda.com/Air/IMG_8071.jpeg",
     features: ["Comfortable Bedding", "Can be added to any room", "Perfect for families", "Additional guest accommodation"]
   }
 ];
