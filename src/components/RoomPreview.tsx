@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -171,9 +172,11 @@ const RoomPreview: React.FC<RoomPreviewProps> = ({ room, children }) => {
             </div>
 
             <div className="pt-4">
-              <Button className="w-full bg-[#800000] hover:bg-[#990000] transition-colors">
-                Book This Room
-              </Button>
+              <Link to={`/booking?room=${room.id}`} className="w-full">
+                <Button className="w-full bg-[#800000] hover:bg-[#990000] transition-colors">
+                  Book This Room
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
