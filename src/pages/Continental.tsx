@@ -14,7 +14,7 @@ const continentalDishes = [
     description: 'Two eggs, bacon, sausage, baked beans, tomatoes and toast',
     price: 25000,
     category: 'Main Dishes',
-    image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'eggs-benedict',
@@ -22,7 +22,7 @@ const continentalDishes = [
     description: 'Poached Eggs and Ham on homemade bread with Hollandaise sauce',
     price: 25000,
     category: 'Main Dishes',
-    image: 'https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'bacon-egg-butty',
@@ -30,7 +30,7 @@ const continentalDishes = [
     description: 'With homemade bread, fresh or toasted',
     price: 20000,
     category: 'Sandwiches',
-    image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'buttered-mushrooms',
@@ -38,7 +38,7 @@ const continentalDishes = [
     description: 'Fresh mushrooms, cream, coriander & black pepper served on toast',
     price: 18000,
     category: 'Vegetarian',
-    image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'sausage-sandwich',
@@ -46,7 +46,7 @@ const continentalDishes = [
     description: 'Premium sausage in fresh bread',
     price: 16000,
     category: 'Sandwiches',
-    image: 'https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'smashed-avocado-poached-eggs',
@@ -54,7 +54,7 @@ const continentalDishes = [
     description: 'Fresh avocado and perfectly poached eggs on artisan toast',
     price: 18000,
     category: 'Vegetarian',
-    image: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'avocado-tartar',
@@ -62,7 +62,7 @@ const continentalDishes = [
     description: 'Cubes of fresh avocado, tomato & onions on a bed of toast',
     price: 16000,
     category: 'Vegetarian',
-    image: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'classic-blt',
@@ -70,7 +70,7 @@ const continentalDishes = [
     description: 'Bacon lettuce and tomato',
     price: 18000,
     category: 'Sandwiches',
-    image: 'https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'pancakes-panache',
@@ -78,7 +78,7 @@ const continentalDishes = [
     description: 'Layered Pancake with banana and honey sprinkled with roasted nuts',
     price: 18000,
     category: 'Sweet Treats',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'eggs-toast',
@@ -86,7 +86,7 @@ const continentalDishes = [
     description: 'Eggs of your choice on toast',
     price: 15000,
     category: 'Simple & Light',
-    image: 'https://images.unsplash.com/photo-1506084868230-bb9d95c24759?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'tropical-fruit-salad',
@@ -94,7 +94,7 @@ const continentalDishes = [
     description: 'Fresh seasonal tropical fruits',
     price: 12000,
     category: 'Healthy Options',
-    image: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'granola-muesli',
@@ -102,7 +102,7 @@ const continentalDishes = [
     description: 'Served with fruits, yogurt & honey',
     price: 15000,
     category: 'Healthy Options',
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'toast',
@@ -110,7 +110,7 @@ const continentalDishes = [
     description: '2 Toasted slices of homemade bread served with butter',
     price: 10000,
     category: 'Simple & Light',
-    image: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'french-toast',
@@ -118,7 +118,7 @@ const continentalDishes = [
     description: 'Served with Pancake syrup',
     price: 16000,
     category: 'Sweet Treats',
-    image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   }
 ];
 

@@ -15,7 +15,7 @@ const refreshmentItems = [
     description: 'Fresh passion fruit juice',
     price: 12000,
     category: 'Single Juices',
-    image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'pineapple-juice',
@@ -23,7 +23,7 @@ const refreshmentItems = [
     description: 'Fresh pineapple juice',
     price: 12000,
     category: 'Single Juices',
-    image: 'https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'watermelone-juice',
@@ -31,7 +31,7 @@ const refreshmentItems = [
     description: 'Fresh watermelon juice',
     price: 12000,
     category: 'Single Juices',
-    image: 'https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   
   // Smoothies
@@ -41,7 +41,7 @@ const refreshmentItems = [
     description: 'Pineapple, Banana, Fresh Ginger & Yoghurt',
     price: 15000,
     category: 'Smoothies',
-    image: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'banana-beauty',
@@ -49,7 +49,7 @@ const refreshmentItems = [
     description: 'Frozen banana, milk and honey. Mango, Pineapple, Banana & Yoghurt',
     price: 15000,
     category: 'Smoothies',
-    image: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
 
   // Health Boast Juices
@@ -59,7 +59,7 @@ const refreshmentItems = [
     description: 'Carrots & Orange',
     price: 15000,
     category: 'Health Boast Juices',
-    image: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'minty-fresh',
@@ -67,7 +67,7 @@ const refreshmentItems = [
     description: 'Lemon, Orange, Ginger & Mint',
     price: 15000,
     category: 'Health Boast Juices',
-    image: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'tropical-juice-coctail',
@@ -75,7 +75,7 @@ const refreshmentItems = [
     description: 'Mixed tropical fruits cocktail',
     price: 15000,
     category: 'Health Boast Juices',
-    image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
 
   // Milk Shakes
@@ -85,7 +85,7 @@ const refreshmentItems = [
     description: 'Chocolate, strawberry or Vanilla',
     price: 15000,
     category: 'Milk Shakes',
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'oreo-milk-shake',
@@ -93,7 +93,7 @@ const refreshmentItems = [
     description: 'Oreo biscuits & Ice cream',
     price: 15000,
     category: 'Milk Shakes',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'avocado-milkshake',
@@ -101,7 +101,7 @@ const refreshmentItems = [
     description: 'Avocado, milk & honey',
     price: 15000,
     category: 'Milk Shakes',
-    image: 'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
 
   // Teas
@@ -111,7 +111,7 @@ const refreshmentItems = [
     description: 'Classic black tea',
     price: 5000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'english-tea',
@@ -119,7 +119,7 @@ const refreshmentItems = [
     description: 'Traditional English breakfast tea',
     price: 10000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1594631661960-21d83d7e3480?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'african-tea',
@@ -127,7 +127,7 @@ const refreshmentItems = [
     description: 'Traditional African tea blend',
     price: 12000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'green-tea',
@@ -135,7 +135,7 @@ const refreshmentItems = [
     description: 'Fresh green tea',
     price: 8000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1627435601361-ec25f5b1d0e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'iced-tea',
@@ -143,7 +143,7 @@ const refreshmentItems = [
     description: 'Refreshing iced tea',
     price: 8000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1499638673689-79a0b5115d87?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'rooibos-tea',
@@ -151,7 +151,7 @@ const refreshmentItems = [
     description: 'South African red bush tea',
     price: 8000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1594736797933-d0c501ba2fe6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'lemon-tea',
@@ -159,7 +159,7 @@ const refreshmentItems = [
     description: 'Tea with fresh lemon',
     price: 8000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'green-tea-mint',
@@ -167,7 +167,7 @@ const refreshmentItems = [
     description: 'Green tea with fresh mint',
     price: 8000,
     category: 'Teas',
-    image: 'https://images.unsplash.com/photo-1564890273-315c46d2d132?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
 
   // Coffees
@@ -177,7 +177,7 @@ const refreshmentItems = [
     description: 'Fresh filtered coffee',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'african-coffee',
@@ -185,7 +185,7 @@ const refreshmentItems = [
     description: 'Premium African coffee beans',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1610889556528-9a770e32642f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'english-coffee',
@@ -193,7 +193,7 @@ const refreshmentItems = [
     description: 'Traditional English coffee',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1521302200778-33500795e128?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'espresso',
@@ -201,7 +201,7 @@ const refreshmentItems = [
     description: 'Strong Italian espresso',
     price: 10000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'capuccino',
@@ -209,7 +209,7 @@ const refreshmentItems = [
     description: 'Classic cappuccino with foam',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'cafelatte',
@@ -217,7 +217,7 @@ const refreshmentItems = [
     description: 'Smooth cafe latte',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'cafe-mocha',
@@ -225,7 +225,7 @@ const refreshmentItems = [
     description: 'Coffee with chocolate',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'latte-macchiato',
@@ -233,7 +233,7 @@ const refreshmentItems = [
     description: 'Layered latte macchiato',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'iced-mocha',
@@ -241,7 +241,7 @@ const refreshmentItems = [
     description: 'Cold mocha with ice',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'hot-chocolate',
@@ -249,7 +249,7 @@ const refreshmentItems = [
     description: 'Rich hot chocolate',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1542990253-0b8de10fb2d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'iced-coffee',
@@ -257,7 +257,7 @@ const refreshmentItems = [
     description: 'Refreshing iced coffee',
     price: 12000,
     category: 'Coffees',
-    image: 'https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   }
 ];
 

@@ -15,7 +15,7 @@ const dinnerItems = [
     description: 'Seasoned crunchy pork cubes fried with vegetables and served with a side of your choice',
     price: 35000,
     category: 'Pork Favorites',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'pork-ribs',
@@ -23,7 +23,7 @@ const dinnerItems = [
     description: 'Served with vegetable fried rice and guacamole',
     price: 35000,
     category: 'Pork Favorites',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'pork-chops',
@@ -31,7 +31,7 @@ const dinnerItems = [
     description: 'Lightly fried, served with jacket potatoes and brandy cream sauce or BBQ sauce',
     price: 35000,
     category: 'Pork Favorites',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Let's Dig In!
   {
@@ -40,7 +40,7 @@ const dinnerItems = [
     description: 'Slow cooked Greek style lamb in a rich olive & tomato sauce served with crunchy tzatziki toast',
     price: 32000,
     category: 'Signature Mains',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'tender-t-bone',
@@ -48,7 +48,7 @@ const dinnerItems = [
     description: 'Pan fried and served with our new herb baste, side chips & salad garnish',
     price: 35000,
     category: 'Signature Mains',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'char-grilled-fillet',
@@ -56,7 +56,7 @@ const dinnerItems = [
     description: 'With Blue Roquefort cheese sauce served with potato wedges & our delicious pumpkin mash',
     price: 36000,
     category: 'Signature Mains',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'beef-stroganoff',
@@ -64,7 +64,7 @@ const dinnerItems = [
     description: 'Well marinated pieces of beef fillet cooked in a creamy mushroom sauce and served on a bed of pasta or rice',
     price: 35000,
     category: 'Signature Mains',
-    image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'quarter-chicken',
@@ -72,7 +72,7 @@ const dinnerItems = [
     description: 'Pan-fried chicken served with chips and salad garnish',
     price: 35000,
     category: 'Poultry',
-    image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Pasta
   {
@@ -81,7 +81,7 @@ const dinnerItems = [
     description: 'Pasta spaghetti in a flavored tomato sauce with fresh basil & parmesan cheese',
     price: 35000,
     category: 'Pasta',
-    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'fettuccini-alfredo',
@@ -89,7 +89,7 @@ const dinnerItems = [
     description: 'Fettuccini pasta in a creamy delicious alfredo sauce with chicken strips',
     price: 35000,
     category: 'Pasta',
-    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'spaghetti-bolognese',
@@ -97,7 +97,7 @@ const dinnerItems = [
     description: 'Al-dente spaghetti with a packed full bolognaise finished with parmesan and served with garlic bread',
     price: 35000,
     category: 'Pasta',
-    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'chicken-lemon-carbonara',
@@ -105,7 +105,7 @@ const dinnerItems = [
     description: 'A rich citric combination blended with cream and egg',
     price: 35000,
     category: 'Pasta',
-    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'tagliatelle',
@@ -113,7 +113,7 @@ const dinnerItems = [
     description: 'Served with a creamy spinach and mushroom sauce',
     price: 34000,
     category: 'Pasta',
-    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Curries
   {
@@ -122,7 +122,7 @@ const dinnerItems = [
     description: 'Hot or mild served with rice or chapatti',
     price: 35000,
     category: 'Curries',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'chicken-beef-curry',
@@ -130,7 +130,7 @@ const dinnerItems = [
     description: 'Aromatic curry with your choice of protein',
     price: 35000,
     category: 'Curries',
-    image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Pizza Corner
   {
@@ -139,7 +139,7 @@ const dinnerItems = [
     description: 'Tomato, Cheese & Basil',
     price: 30000,
     category: 'Pizza Corner',
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'vegetarian-pizza',
@@ -147,7 +147,7 @@ const dinnerItems = [
     description: 'Vegetables & cheese',
     price: 35000,
     category: 'Pizza Corner',
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'supreme-pizza',
@@ -155,7 +155,7 @@ const dinnerItems = [
     description: 'Beef mince, Bacon, mushrooms, olives & peppers',
     price: 40000,
     category: 'Pizza Corner',
-    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Desserts
   {
@@ -164,7 +164,7 @@ const dinnerItems = [
     description: 'Vanilla ice cream and a shot of espresso',
     price: 18000,
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1563379091339-03246963d396?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'ice-cream-scoops',
@@ -172,7 +172,7 @@ const dinnerItems = [
     description: 'Choose between or mix chocolate, vanilla or strawberry ice cream. Add chocolate sauce',
     price: 15000,
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1563379091339-03246963d396?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'banana-split',
@@ -180,7 +180,7 @@ const dinnerItems = [
     description: 'Banana served with 2 scoops vanilla ice cream',
     price: 28000,
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1563379091339-03246963d396?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'home-made-cake',
@@ -188,7 +188,7 @@ const dinnerItems = [
     description: 'Please ask availability!',
     price: 15000,
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   }
 ];
 

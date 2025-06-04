@@ -15,7 +15,7 @@ const lunchItems = [
     description: 'Served with Guacamoles',
     price: 12000,
     category: 'Starters & Appetizers',
-    image: 'https://images.unsplash.com/photo-1582169296872-279169f2ee9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'pita-bread-dips',
@@ -23,7 +23,7 @@ const lunchItems = [
     description: 'Homemade pita bread served with Humus, Guacamole and Marinated Olives',
     price: 20000,
     category: 'Starters & Appetizers',
-    image: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'spring-rolls',
@@ -31,7 +31,7 @@ const lunchItems = [
     description: 'Vegetable or Beef Spring rolls served with sweet chili',
     price: 15000,
     category: 'Starters & Appetizers',
-    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'samosas',
@@ -39,7 +39,7 @@ const lunchItems = [
     description: 'Vegetable or Beef served with chili jam',
     price: 15000,
     category: 'Starters & Appetizers',
-    image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'buffalo-wings',
@@ -47,7 +47,7 @@ const lunchItems = [
     description: 'Crispy chicken wings tossed with hot sauce & served with cocktail sauce',
     price: 20000,
     category: 'Starters & Appetizers',
-    image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Soups
   {
@@ -56,7 +56,7 @@ const lunchItems = [
     description: 'Simple & tasty, served with homemade bread roll',
     price: 18000,
     category: 'Soups',
-    image: 'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'mushroom-soup',
@@ -64,7 +64,7 @@ const lunchItems = [
     description: 'Rich and creamy mushroom soup',
     price: 18000,
     category: 'Soups',
-    image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'tomato-soup',
@@ -72,7 +72,7 @@ const lunchItems = [
     description: 'Classic tomato soup with fresh herbs',
     price: 18000,
     category: 'Soups',
-    image: 'https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Salads
   {
@@ -81,7 +81,7 @@ const lunchItems = [
     description: 'Onion, cucumber, tomato & avocado',
     price: 25000,
     category: 'Salads',
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'greek-salad',
@@ -89,7 +89,7 @@ const lunchItems = [
     description: 'Locally sourced ingredients complemented with feta cheese, olives & our best olive oil',
     price: 28000,
     category: 'Salads',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'chicken-caesar',
@@ -97,7 +97,7 @@ const lunchItems = [
     description: 'Chicken strips, bread croutons, parmesan, lettuce and homemade Caesar dressing',
     price: 30000,
     category: 'Salads',
-    image: 'https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Wraps
   {
@@ -106,7 +106,7 @@ const lunchItems = [
     description: 'Marinated beef fillet and fresh mushrooms accompanied by smooth avocado and yoghurt mix',
     price: 29000,
     category: 'Wraps',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'chicken-fajita',
@@ -114,7 +114,7 @@ const lunchItems = [
     description: 'Hot chicken strips with bell peppers & onions served with sour cream, guacamole and salsa',
     price: 28000,
     category: 'Wraps',
-    image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Sandwiches & Burgers
   {
@@ -123,7 +123,7 @@ const lunchItems = [
     description: 'Tender slices of beef OR Chicken gently fried with onion in a delicious sauce, tucked between two slices of homemade bread. Served with chips',
     price: 30000,
     category: 'Sandwiches & Burgers',
-    image: 'https://images.unsplash.com/photo-1553909489-cd47e0ef937f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'classic-burger',
@@ -131,7 +131,7 @@ const lunchItems = [
     description: 'A healthy patty of your choice served on a homemade bread roll topped with cheese & served with side chips',
     price: 30000,
     category: 'Sandwiches & Burgers',
-    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   // Mains
   {
@@ -140,7 +140,7 @@ const lunchItems = [
     description: 'Seasoned whole tilapia slathered with diced vegetables, wrapped in a foil and baked served with rice',
     price: 45000,
     category: 'Mains',
-    image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   },
   {
     id: 'grilled-fish',
@@ -148,7 +148,7 @@ const lunchItems = [
     description: 'Served with chips and salads',
     price: 45000,
     category: 'Mains',
-    image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'
+    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
   }
 ];
 
