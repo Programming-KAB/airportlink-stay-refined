@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import RoomPreview from './RoomPreview';
 
 type Room = {
   id: string;
@@ -13,6 +14,7 @@ type Room = {
   capacity: number;
   image: string;
   features: string[];
+  gallery: string[];
 };
 
 const rooms: Room[] = [
@@ -23,7 +25,13 @@ const rooms: Room[] = [
     price: 95,
     capacity: 2,
     image: "http://away2uganda.com/Air/IMG_8074.jpeg",
-    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"]
+    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"],
+    gallery: [
+      "http://away2uganda.com/Air/IMG_8074.jpeg",
+      "http://away2uganda.com/Air/IMG_8071.jpeg",
+      "http://away2uganda.com/Air/IMG_8064.jpeg",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+    ]
   },
   {
     id: "deluxe-single",
@@ -32,7 +40,13 @@ const rooms: Room[] = [
     price: 60,
     capacity: 1,
     image: "https://airportlinkguesthouse.com/air/Single_bed_in.jpg",
-    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Work Desk"]
+    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Work Desk"],
+    gallery: [
+      "https://airportlinkguesthouse.com/air/Single_bed_in.jpg",
+      "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
+      "http://away2uganda.com/Air/IMG_8064.jpeg"
+    ]
   },
   {
     id: "extra-bed",
@@ -41,7 +55,13 @@ const rooms: Room[] = [
     price: 35,
     capacity: 1,
     image: "http://away2uganda.com/Air/IMG_8071.jpeg",
-    features: ["Comfortable Bedding", "Can be added to any room", "Perfect for families", "Additional guest accommodation"]
+    features: ["Comfortable Bedding", "Can be added to any room", "Perfect for families", "Additional guest accommodation"],
+    gallery: [
+      "http://away2uganda.com/Air/IMG_8071.jpeg",
+      "http://away2uganda.com/Air/IMG_8074.jpeg",
+      "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
+      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+    ]
   }
 ];
 
@@ -58,9 +78,16 @@ const RoomSection: React.FC = () => {
           {rooms.map((room) => (
             <div key={room.id} className="room-card h-full">
               <Card className="h-full flex flex-col">
-                <div className="h-64 overflow-hidden">
-                  <img src={room.image} alt={room.name} className="w-full h-full object-cover" />
-                </div>
+                <RoomPreview room={room}>
+                  <div className="h-64 overflow-hidden cursor-pointer relative group">
+                    <img src={room.image} alt={room.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="bg-white/90 px-4 py-2 rounded-lg text-[#800000] font-medium">
+                        Click to Preview
+                      </div>
+                    </div>
+                  </div>
+                </RoomPreview>
                 <CardHeader className="pb-3">
                   <div className="flex justify-between items-center">
                     <CardTitle className="text-xl font-playfair text-[#800000]">{room.name}</CardTitle>
