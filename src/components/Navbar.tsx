@@ -42,6 +42,9 @@ const Navbar: React.FC = () => {
             <Link to="/amenities" className="font-medium text-white hover:text-secondary transition-colors">
               Amenities
             </Link>
+            <Link to="/gallery" className="font-medium text-white hover:text-secondary transition-colors">
+              Gallery
+            </Link>
             
             {/* Menu Dropdown */}
             <NavigationMenu>
@@ -162,6 +165,13 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Amenities
+              </Link>
+              <Link 
+                to="/gallery" 
+                className="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-secondary hover:bg-[#990000] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Gallery
               </Link>
               
               {/* Mobile Menu Items */}
