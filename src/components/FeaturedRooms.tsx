@@ -28,7 +28,7 @@ const FeaturedRooms: React.FC = () => {
               <h3 className="text-xl font-playfair font-bold text-[#800000] mb-2">Deluxe Twin</h3>
               <p className="text-gray-600 mb-4">Two comfortable twin beds, perfect for friends or colleagues.</p>
               <div className="flex justify-between items-center">
-                <span className="text-lg font-bold text-[#4CAF50]">$95/night</span>
+                <span className="text-lg font-bold text-[#4CAF50]">$70/night</span>
                 <Link to="/rooms">
                   <Button size="sm" className="bg-[#800000] hover:bg-[#600000] text-white">
                     View Details
@@ -61,6 +61,33 @@ const FeaturedRooms: React.FC = () => {
             </div>
           </div>
           
+
+
+          <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="h-48 overflow-hidden">
+              <img 
+                src="https://airportlinkguesthouse.com/air/Single_bed_in.jpg" 
+                alt="Double Bed Room" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-playfair font-bold text-[#800000] mb-2">Double Bed Room</h3>
+              <p className="text-gray-600 mb-4">Premium room with luxurious furnishings and modern amenities.</p>
+              <div className="flex justify-between items-center">
+                <span className="text-lg font-bold text-[#4CAF50]">$70/night</span>
+                <Link to="/rooms">
+                  <Button size="sm" className="bg-[#800000] hover:bg-[#600000] text-white">
+                    View Details
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+
+
+
           {/* Room Card 3 - Extra Bed */}
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">

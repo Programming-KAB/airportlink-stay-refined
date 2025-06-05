@@ -47,7 +47,7 @@ const rooms: Room[] = [
       "http://away2uganda.com/Air/IMG_8064.jpeg",
       ""
     ]
-  }
+  },
   {
     id: "deluxe-single",
     name: "Deluxe Single Bed Room",

@@ -37,11 +37,6 @@ const AmenitiesPreview: React.FC = () => {
           </div>
           
           <div className="hover-scale p-4 bg-white rounded-lg shadow-md">
-            <Map className="mx-auto h-10 w-10 text-[#800000]" />
-            <h3 className="mt-3 font-medium">Airport Shuttle</h3>
-          </div>
-          
-          <div className="hover-scale p-4 bg-white rounded-lg shadow-md">
             <CalendarCheck className="mx-auto h-10 w-10 text-[#800000]" />
             <h3 className="mt-3 font-medium">Flexible Booking</h3>
           </div>
