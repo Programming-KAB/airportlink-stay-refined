@@ -24,23 +24,16 @@ const rooms: Room[] = [
   {
     id: "deluxe-twin",
     name: "Deluxe Twin Bed Room",
-    price: 95,
+    price: 70,
     capacity: 2,
     description: "Elegant room with two comfortable twin beds"
   },
   {
     id: "deluxe-single",
     name: "Deluxe Single Bed Room",
-    price: 60,
+    price: 70,
     capacity: 1,
     description: "Premium single room with luxurious furnishings"
-  },
-  {
-    id: "triple",
-    name: "Triple Bed Room",
-    price: 120,
-    capacity: 3,
-    description: "Spacious room perfect for families or groups"
   },
   {
     id: "extra-bed",
