@@ -89,7 +89,7 @@ export const lunchItems = [
     description: 'Chicken strips, bread croutons, parmesan, lettuce and homemade Caesar dressing',
     price: 30000,
     category: 'Salads',
-    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
+    image: 'https://airportlinkguesthouse.com/dishes/chkn.jpeg'
   },
   // Wraps
   {
