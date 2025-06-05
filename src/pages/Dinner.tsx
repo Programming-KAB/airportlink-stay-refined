@@ -15,7 +15,7 @@ const dinnerItems = [
     description: 'Seasoned crunchy pork cubes fried with vegetables and served with a side of your choice',
     price: 35000,
     category: 'Pork Favorites',
-    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
+    image: 'https://airportlinkguesthouse.com/dishes/steak%201.jpeg'
   },
   {
     id: 'pork-ribs',
@@ -31,7 +31,7 @@ const dinnerItems = [
     description: 'Lightly fried, served with jacket potatoes and brandy cream sauce or BBQ sauce',
     price: 35000,
     category: 'Pork Favorites',
-    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
+    image: 'https://airportlinkguesthouse.com/dishes/steak.jpeg'
   },
   // Let's Dig In!
   {
@@ -72,7 +72,7 @@ const dinnerItems = [
     description: 'Pan-fried chicken served with chips and salad garnish',
     price: 35000,
     category: 'Poultry',
-    image: 'http://away2uganda.com/Air/IMG_8060.jpeg'
+    image: 'https://airportlinkguesthouse.com/dishes/chkn.jpeg'
   },
   // Pasta
   {
