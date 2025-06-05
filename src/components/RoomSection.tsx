@@ -22,7 +22,7 @@ const rooms: Room[] = [
     id: "deluxe-twin",
     name: "Deluxe Twin Bed Room",
     description: "Elegant room with two comfortable twin beds, perfect for friends or colleagues traveling together.",
-    price: 95,
+    price: 70,
     capacity: 2,
     image: "http://away2uganda.com/Air/IMG_8074.jpeg",
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"],
@@ -33,6 +33,21 @@ const rooms: Room[] = [
       "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
     ]
   },
+  {
+    id: "double-bed",
+    name: "Double Bed Room",
+    description: "Elegant room with two comfortable twin beds, perfect for friends or colleagues traveling together.",
+    price: 70,
+    capacity: 2,
+    image: "https://airportlinkguesthouse.com/air/Single_bed_in.jpg",
+    features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"],
+    gallery: [
+      "http://away2uganda.com/Air/IMG_8074.jpeg",
+      "http://away2uganda.com/Air/IMG_8071.jpeg",
+      "http://away2uganda.com/Air/IMG_8064.jpeg",
+      ""
+    ]
+  }
   {
     id: "deluxe-single",
     name: "Deluxe Single Bed Room",
