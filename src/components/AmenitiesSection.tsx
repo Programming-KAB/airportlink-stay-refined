@@ -28,12 +28,7 @@ const amenities = [
     title: "Free Wi-Fi",
     description: "Stay connected with high-speed internet access."
   },
-  {
-    icon: "🚕",
-    title: "Airport Shuttle",
-    description: "Complimentary shuttle service to and from the airport."
-  },
-  {
+   {
     icon: "🔒",
     title: "24/7 Security",
     description: "Feel safe with our around-the-clock security service."
