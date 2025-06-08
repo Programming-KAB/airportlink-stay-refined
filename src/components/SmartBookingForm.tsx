@@ -11,6 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { useSearchParams } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
 
 interface Room {
   id: string;
@@ -19,30 +20,6 @@ interface Room {
   capacity: number;
   description: string;
 }
-
-const rooms: Room[] = [
-  {
-    id: "deluxe-twin",
-    name: "Deluxe Twin Bed Room",
-    price: 70,
-    capacity: 2,
-    description: "Elegant room with two comfortable twin beds"
-  },
-  {
-    id: "deluxe-single",
-    name: "Deluxe Single Bed Room",
-    price: 70,
-    capacity: 1,
-    description: "Premium single room with luxurious furnishings"
-  },
-  {
-    id: "extra-bed",
-    name: "Extra Bed",
-    price: 35,
-    capacity: 1,
-    description: "Additional comfortable bed for any room"
-  }
-];
 
 const SmartBookingForm: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -63,8 +40,76 @@ const SmartBookingForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
   const [nights, setNights] = useState(0);
+  const [rooms, setRooms] = useState<Room[]>([]);
+  const [loading, setLoading] = useState(true);
   
   const { toast } = useToast();
+
+  // Fetch room types from Supabase
+  useEffect(() => {
+    const fetchRoomTypes = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('room_types')
+          .select('*')
+          .order('price');
+
+        if (error) {
+          console.error('Error fetching room types:', error);
+          toast({
+            title: "Error",
+            description: "Failed to load room types. Using default rooms.",
+            variant: "destructive",
+          });
+          // Fallback to hardcoded rooms
+          setRooms([
+            {
+              id: "deluxe-twin",
+              name: "Deluxe Twin Bed Room",
+              price: 70,
+              capacity: 2,
+              description: "Elegant room with two comfortable twin beds"
+            },
+            {
+              id: "deluxe-single",
+              name: "Deluxe Single Bed Room",
+              price: 70,
+              capacity: 1,
+              description: "Premium single room with luxurious furnishings"
+            },
+            {
+              id: "extra-bed",
+              name: "Extra Bed",
+              price: 35,
+              capacity: 1,
+              description: "Additional comfortable bed for any room"
+            }
+          ]);
+        } else {
+          // Transform Supabase data to match our Room interface
+          const transformedRooms = data.map(room => ({
+            id: room.room_id,
+            name: room.name,
+            price: Number(room.price),
+            capacity: room.capacity,
+            description: room.description || ''
+          }));
+          setRooms(transformedRooms);
+        }
+      } catch (err) {
+        console.error('Unexpected error:', err);
+        toast({
+          title: "Error",
+          description: "Failed to connect to database. Using default rooms.",
+          variant: "destructive",
+        });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRoomTypes();
+  }, [toast]);
 
   // Calculate price whenever dates or room type changes
   useEffect(() => {
@@ -79,7 +124,7 @@ const SmartBookingForm: React.FC = () => {
       setNights(0);
       setTotalPrice(0);
     }
-  }, [formData.checkIn, formData.checkOut, formData.roomType]);
+  }, [formData.checkIn, formData.checkOut, formData.roomType, rooms]);
 
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -118,35 +163,45 @@ const SmartBookingForm: React.FC = () => {
     setIsSubmitting(true);
     
     const selectedRoom = rooms.find(room => room.id === formData.roomType);
+    const bookingId = `BK${Date.now()}`;
     
-    // Prepare booking details for email
-    const bookingDetails = {
-      bookingId: `BK${Date.now()}`,
-      guestName: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      address: formData.address,
-      roomType: selectedRoom?.name,
-      numberOfGuests: formData.guests,
-      checkInDate: format(formData.checkIn, 'PPP'),
-      checkOutDate: format(formData.checkOut, 'PPP'),
-      numberOfNights: nights,
-      roomPrice: selectedRoom?.price,
-      totalAmount: totalPrice,
-      specialRequests: formData.specialRequests,
-      bookingTime: new Date().toLocaleString()
-    };
-
     try {
-      // Simulate API call for booking
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Here you would normally send the email to briankasozi@gmail.com
-      console.log('Booking Details to be emailed:', bookingDetails);
-      
+      // Save booking to Supabase
+      const { error } = await supabase
+        .from('bookings')
+        .insert([
+          {
+            booking_id: bookingId,
+            guest_name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            address: formData.address || null,
+            room_type: formData.roomType,
+            room_name: selectedRoom?.name || null,
+            number_of_guests: parseInt(formData.guests),
+            check_in_date: format(formData.checkIn, 'yyyy-MM-dd'),
+            check_out_date: format(formData.checkOut, 'yyyy-MM-dd'),
+            number_of_nights: nights,
+            room_price: selectedRoom?.price || null,
+            total_amount: totalPrice,
+            special_requests: formData.specialRequests || null,
+            booking_status: 'pending'
+          }
+        ]);
+
+      if (error) {
+        console.error('Error saving booking:', error);
+        toast({
+          title: "Booking Failed",
+          description: "There was an error saving your booking. Please try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+
       toast({
         title: "Booking Confirmed!",
-        description: `Your booking (ID: ${bookingDetails.bookingId}) has been confirmed. We've sent the details to briankasozi@gmail.com and will contact you shortly.`,
+        description: `Your booking (ID: ${bookingId}) has been confirmed and saved to our database.`,
       });
       
       // Reset form
@@ -163,9 +218,10 @@ const SmartBookingForm: React.FC = () => {
       });
       
     } catch (error) {
+      console.error('Unexpected error:', error);
       toast({
         title: "Booking Failed",
-        description: "There was an error processing your booking. Please try again.",
+        description: "There was an unexpected error processing your booking. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -174,6 +230,16 @@ const SmartBookingForm: React.FC = () => {
   };
 
   const selectedRoom = rooms.find(room => room.id === formData.roomType);
+
+  if (loading) {
+    return (
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center py-8">
+          <p>Loading booking form...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto">

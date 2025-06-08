@@ -9,7 +9,99 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      bookings: {
+        Row: {
+          address: string | null
+          booking_id: string
+          booking_status: string | null
+          check_in_date: string
+          check_out_date: string
+          created_at: string
+          email: string
+          guest_name: string
+          id: string
+          number_of_guests: number
+          number_of_nights: number
+          phone: string
+          room_name: string | null
+          room_price: number | null
+          room_type: string
+          special_requests: string | null
+          total_amount: number
+          updated_at: string
+        }
+        Insert: {
+          address?: string | null
+          booking_id: string
+          booking_status?: string | null
+          check_in_date: string
+          check_out_date: string
+          created_at?: string
+          email: string
+          guest_name: string
+          id?: string
+          number_of_guests?: number
+          number_of_nights: number
+          phone: string
+          room_name?: string | null
+          room_price?: number | null
+          room_type: string
+          special_requests?: string | null
+          total_amount: number
+          updated_at?: string
+        }
+        Update: {
+          address?: string | null
+          booking_id?: string
+          booking_status?: string | null
+          check_in_date?: string
+          check_out_date?: string
+          created_at?: string
+          email?: string
+          guest_name?: string
+          id?: string
+          number_of_guests?: number
+          number_of_nights?: number
+          phone?: string
+          room_name?: string | null
+          room_price?: number | null
+          room_type?: string
+          special_requests?: string | null
+          total_amount?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      room_types: {
+        Row: {
+          capacity: number
+          created_at: string
+          description: string | null
+          id: string
+          name: string
+          price: number
+          room_id: string
+        }
+        Insert: {
+          capacity: number
+          created_at?: string
+          description?: string | null
+          id?: string
+          name: string
+          price: number
+          room_id: string
+        }
+        Update: {
+          capacity?: number
+          created_at?: string
+          description?: string | null
+          id?: string
+          name?: string
+          price?: number
+          room_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
