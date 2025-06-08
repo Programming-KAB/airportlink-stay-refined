@@ -492,8 +492,7 @@ const SmartBookingForm: React.FC = () => {
                 <h5 className="font-semibold text-sm text-blue-800 mb-2">Included in your stay:</h5>
                 <ul className="text-xs text-blue-700 space-y-1">
                   <li>• Free Wi-Fi</li>
-                  <li>• Complimentary breakfast</li>
-                  <li>• Airport shuttle service</li>
+                  <li>• Breakfast</li>
                   <li>• 24/7 front desk</li>
                 </ul>
               </div>
