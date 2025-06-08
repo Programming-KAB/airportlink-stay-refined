@@ -83,7 +83,7 @@ const ContactSection: React.FC = () => {
               <div className="h-[300px] rounded-lg overflow-hidden border border-gray-300 bg-gray-100">
                 <iframe 
                   title="Airport Link Guesthouse Location"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=32.4625%2C0.0625%2C32.4875%2C0.0875&amp;layer=mapnik&amp;marker=0.075%2C32.475"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=32.445%2C0.067%2C32.461%2C0.083&amp;layer=mapnik&amp;marker=0.075253%2C32.453291"
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }} 
@@ -92,7 +92,7 @@ const ContactSection: React.FC = () => {
                 </iframe>
                 <div className="mt-2 text-center">
                   <a 
-                    href="https://www.openstreetmap.org/?mlat=0.075&mlon=32.475#map=15/0.075/32.475" 
+                    href="https://www.openstreetmap.org/?mlat=0.075253&mlon=32.453291#map=15/0.075253/32.453291" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-secondary hover:text-secondary/80 text-sm underline"
