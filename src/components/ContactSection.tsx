@@ -1,13 +1,78 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { MapPin, Phone, Clock, Mail } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    contact: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('contact_messages')
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          contact_number: formData.contact,
+          message: formData.message
+        });
+
+      if (error) {
+        console.error('Error submitting contact form:', error);
+        toast({
+          title: "Error",
+          description: "There was an error submitting your message. Please try again.",
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. We'll get back to you soon.",
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          contact: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -111,28 +176,70 @@ const ContactSection: React.FC = () => {
                 <CardDescription className="text-gray-600">We'd love to hear from you!</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name</Label>
-                      <Input id="name" placeholder="Your Name" className="border-[#800000]/30 focus-visible:ring-[#FFA500]" />
+                      <Input 
+                        id="name" 
+                        placeholder="Your Name" 
+                        className="border-[#800000]/30 focus-visible:ring-[#FFA500]"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="your@email.com" className="border-[#800000]/30 focus-visible:ring-[#FFA500]" />
+                      <Input 
+                        id="email" 
+                        type="email" 
+                        placeholder="your@email.com" 
+                        className="border-[#800000]/30 focus-visible:ring-[#FFA500]"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="contact">Contact / WhatsApp Number</Label>
-                    <Input id="contact" placeholder="+256 77..." className="border-[#800000]/30 focus-visible:ring-[#FFA500]" />
+                    <Input 
+                      id="contact" 
+                      placeholder="+256 77..." 
+                      className="border-[#800000]/30 focus-visible:ring-[#FFA500]"
+                      value={formData.contact}
+                      onChange={handleInputChange}
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Your message here..." className="border-[#800000]/30 focus-visible:ring-[#FFA500] h-32" />
+                    <Textarea 
+                      id="message" 
+                      placeholder="Your message here..." 
+                      className="border-[#800000]/30 focus-visible:ring-[#FFA500] h-32"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                    />
                   </div>
                   <div className="flex justify-end space-x-4">
-                    <Button variant="outline" type="button" className="border-[#800000] text-[#800000] hover:bg-[#800000]/10">Cancel</Button>
-                    <Button type="submit" className="bg-[#FFA500] hover:bg-[#E69500] text-white">Send Message</Button>
+                    <Button 
+                      variant="outline" 
+                      type="button" 
+                      className="border-[#800000] text-[#800000] hover:bg-[#800000]/10"
+                      onClick={() => setFormData({ name: '', email: '', contact: '', message: '' })}
+                      disabled={isSubmitting}
+                    >
+                      Cancel
+                    </Button>
+                    <Button 
+                      type="submit" 
+                      className="bg-[#FFA500] hover:bg-[#E69500] text-white"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
+                    </Button>
                   </div>
                 </form>
               </CardContent>
