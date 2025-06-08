@@ -80,15 +80,26 @@ const ContactSection: React.FC = () => {
 
             <div className="mt-10">
               <h3 className="text-xl font-semibold text-primary mb-5">Find Us</h3>
-              <div className="h-[300px] rounded-lg overflow-hidden border border-gray-300">
+              <div className="h-[300px] rounded-lg overflow-hidden border border-gray-300 bg-gray-100">
                 <iframe 
                   title="Airport Link Guesthouse Location"
-                  src="https://maps.app.goo.gl/dpevpm9TrGrTDR9s8" 
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=32.4625%2C0.0625%2C32.4875%2C0.0875&amp;layer=mapnik&amp;marker=0.075%2C32.475"
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }} 
-                  loading="lazy">
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade">
                 </iframe>
+                <div className="mt-2 text-center">
+                  <a 
+                    href="https://www.openstreetmap.org/?mlat=0.075&mlon=32.475#map=15/0.075/32.475" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-secondary hover:text-secondary/80 text-sm underline"
+                  >
+                    View larger map
+                  </a>
+                </div>
               </div>
             </div>
           </div>
