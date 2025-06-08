@@ -11,6 +11,7 @@ const Gallery = () => {
     "http://away2uganda.com/Air/IMG_8071.jpeg",
     "http://away2uganda.com/Air/IMG_8064.jpeg",
     "https://airportlinkguesthouse.com/air/Single_bed_in.jpg",
+    "https://www.airportlinkguesthouse.com/air/Trip_Bed.jpg",
   ];
 
   const natureImages = [

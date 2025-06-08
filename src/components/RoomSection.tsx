@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,10 +68,10 @@ const rooms: Room[] = [
     description: "Additional comfortable bed that can be added to any room for extra guests.",
     price: 35,
     capacity: 1,
-    image: "http://away2uganda.com/Air/IMG_8071.jpeg",
+    image: "https://www.airportlinkguesthouse.com/air/Trip_Bed.jpg",
     features: ["Comfortable Bedding", "Can be added to any room", "Perfect for families", "Additional guest accommodation"],
     gallery: [
-      "http://away2uganda.com/Air/IMG_8071.jpeg",
+      "https://www.airportlinkguesthouse.com/air/Trip_Bed.jpg",
       "http://away2uganda.com/Air/IMG_8074.jpeg",
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
       "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"

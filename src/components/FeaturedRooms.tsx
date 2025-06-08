@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -92,7 +91,7 @@ const FeaturedRooms: React.FC = () => {
           <div className="room-card bg-white rounded-lg overflow-hidden shadow-lg">
             <div className="h-48 overflow-hidden">
               <img 
-                src="https://airportlinkguesthouse.com/air/Double_Bed.jpg" 
+                src="https://www.airportlinkguesthouse.com/air/Trip_Bed.jpg" 
                 alt="Extra Bed" 
                 className="w-full h-full object-cover"
               />
