@@ -28,8 +28,7 @@ const rooms: Room[] = [
     gallery: [
       "http://away2uganda.com/Air/IMG_8074.jpeg",
       "http://away2uganda.com/Air/IMG_8071.jpeg",
-      "http://away2uganda.com/Air/IMG_8064.jpeg",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+      "https://airportlinkguesthouse.com/dishes/rooms/rm%201.jpeg"
     ]
   },
   {
@@ -42,9 +41,7 @@ const rooms: Room[] = [
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Room Service", "Coffee Maker"],
     gallery: [
       "http://away2uganda.com/Air/IMG_8074.jpeg",
-      "http://away2uganda.com/Air/IMG_8071.jpeg",
-      "http://away2uganda.com/Air/IMG_8064.jpeg",
-      ""
+      "http://away2uganda.com/Air/IMG_8071.jpeg"
     ]
   },
   {
@@ -53,13 +50,14 @@ const rooms: Room[] = [
     description: "Premium single room with luxurious furnishings and all modern amenities for a comfortable stay.",
     price: 60,
     capacity: 1,
-    image: "https://airportlinkguesthouse.com/air/Single_bed_in.jpg",
+    image: "https://airportlinkguesthouse.com/dishes/rooms/rm3.jpeg",
     features: ["Free Wi-Fi", "Air Conditioning", "TV", "Private Bathroom", "Mini Fridge", "Work Desk"],
     gallery: [
       "https://airportlinkguesthouse.com/air/Single_bed_in.jpg",
-      "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
-      "https://images.unsplash.com/photo-1483058712412-4245e9b90334",
-      "http://away2uganda.com/Air/IMG_8064.jpeg"
+      "https://airportlinkguesthouse.com/dishes/rooms/rm%204.jpeg",
+      "https://airportlinkguesthouse.com/dishes/rooms/rm%205.jpeg",
+     
+      "https://airportlinkguesthouse.com/dishes/rooms/rm3.jpeg"
     ]
   },
   {
@@ -73,8 +71,8 @@ const rooms: Room[] = [
     gallery: [
       "https://www.airportlinkguesthouse.com/air/Trip_Bed.jpg",
       "http://away2uganda.com/Air/IMG_8074.jpeg",
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625",
-      "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+      "https://airportlinkguesthouse.com/dishes/rooms/rm2.jpeg"
+    
     ]
   }
 ];
